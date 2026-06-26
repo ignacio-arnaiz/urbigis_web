@@ -1353,58 +1353,14 @@ function htFilter(q) {
 
 
 
-<script>
-function showSection(which) {
-  const inicioSec = document.getElementById('inicioSection');
-  const blogSec   = document.getElementById('blog');
-  const helpSec   = document.getElementById('helpSection');
-  const legalSec  = document.getElementById('legalSection');
-  const navInicio = document.getElementById('navInicio');
-  const navBlog   = document.getElementById('navBlog');
-  const navAyuda  = document.getElementById('navAyuda');
 
-  // Ocultar todo
-  inicioSec.style.display = 'none';
-  blogSec.style.display   = 'none';
-  helpSec.classList.remove('active');
-  helpSec.style.display   = 'none';
-  if (legalSec) legalSec.style.display = 'none';
-
-  // Quitar activo de todos los botones
-  [navInicio, navBlog, navAyuda].forEach(n => { if(n) n.style.color = ''; });
-
-  // Mostrar la sección elegida
-  if (which === 'inicio') {
-    inicioSec.style.display = '';
-    if (navInicio) navInicio.style.color = '#FFFFFF';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else if (which === 'blog') {
-    blogSec.style.display = '';
-    if (navBlog) navBlog.style.color = '#FFFFFF';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (!blogSec.dataset.initialized) { blogInit(); blogSec.dataset.initialized = '1'; }
-  } else if (which === 'help') {
-    helpSec.style.display = '';
-    helpSec.classList.add('active');
-    if (navAyuda) navAyuda.style.color = '#FFFFFF';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else if (which === 'legal') {
-    if (legalSec) legalSec.style.display = '';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
-
-// Iniciar mostrando Inicio
-document.addEventListener('DOMContentLoaded', function() {
-  showSection('inicio');
-});
-</script>
 
 
 
 
 
 <script>
+
 const BLOG_LIST = [
   {slug:'propuesta-para-un-sistema-de-coordinacion-de-la-informacion-geografica',title:'Propuesta para un Sistema de Coordinación de la Información Geográfica',date:'13 Jan 2026',year:'2026',img:'',file:'blog/2026-01-13-propuesta-para-un-sistema-de-coordinacion-de-la-informacion-geografica.html'},
   {slug:'el-geoportal-municipal-en-urbigis-el-caso-de-la-comunidad-de-madrid',title:'El geoportal municipal en urbiGIS: el caso de la Comunidad de Madrid',date:'16 Jan 2025',year:'2025',img:'https://info.urbigis.com/wp-content/uploads/2025/01/Captura-de-pantalla-2025-01-15-135137.png',file:'blog/2025-01-16-el-geoportal-municipal-en-urbigis-el-caso-de-la-comunidad-de-madrid.html'},
@@ -1594,6 +1550,54 @@ function blogInit() {
   blogBuildList('');
   blogLoadIdx(0);
 }
+
+
+
+function showSection(which) {
+  const inicioSec = document.getElementById('inicioSection');
+  const blogSec   = document.getElementById('blog');
+  const helpSec   = document.getElementById('helpSection');
+  const legalSec  = document.getElementById('legalSection');
+  const navInicio = document.getElementById('navInicio');
+  const navBlog   = document.getElementById('navBlog');
+  const navAyuda  = document.getElementById('navAyuda');
+
+  // Ocultar todo
+  inicioSec.style.display = 'none';
+  blogSec.style.display   = 'none';
+  helpSec.classList.remove('active');
+  helpSec.style.display   = 'none';
+  if (legalSec) legalSec.style.display = 'none';
+
+  // Quitar activo de todos los botones
+  [navInicio, navBlog, navAyuda].forEach(n => { if(n) n.style.color = ''; });
+
+  // Mostrar la sección elegida
+  if (which === 'inicio') {
+    inicioSec.style.display = '';
+    if (navInicio) navInicio.style.color = '#FFFFFF';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (which === 'blog') {
+    blogSec.style.display = '';
+    if (navBlog) navBlog.style.color = '#FFFFFF';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!blogSec.dataset.initialized) { blogInit(); blogSec.dataset.initialized = '1'; }
+  } else if (which === 'help') {
+    helpSec.style.display = '';
+    helpSec.classList.add('active');
+    if (navAyuda) navAyuda.style.color = '#FFFFFF';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (which === 'legal') {
+    if (legalSec) legalSec.style.display = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// Iniciar mostrando Inicio
+document.addEventListener('DOMContentLoaded', function() {
+  showSection('inicio');
+});
+
 </script>
 
 </body>
