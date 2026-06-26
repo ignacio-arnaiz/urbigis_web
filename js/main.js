@@ -319,3 +319,10 @@ function htFilter(q) {
   });
 }
 
+
+function navClose() {
+  var links = document.getElementById('navLinks');
+  var burger = document.getElementById('navHamburger');
+  if (links) links.classList.remove('open');
+  if (burger) burger.classList.remove('open');
+}
