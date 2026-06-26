@@ -1,0 +1,2477 @@
+<!--
+title: Más de 1.000.000 de mapas disponibles en urbiGIS
+date: 2020-05-14
+slug: mas-de-1-000-000-de-mapas-disponibles-en-urbigis
+-->
+<p><span style="font-size: 12pt;">El catálogo de mapas de <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> ha superado un millón de mapas (1.045.000), poco a poco vamos explorando el universo de servicios geoespaciales de todo el mundo y añadiéndolos al catálogo. Esta es una tarea que sabemos es interminable pero consideramos que tiene interés para nuestros usuarios, porque <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> es una herramienta que tiene voluntad de ser global y de hacer sencillo localizar la información espacial disponible en su ciudad o su territorio, sin tener que rebuscar entre los diferentes visores de las organizaciones que publican mapas y con las avanzadas características que distinguen a <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> de una IDE tradicional. En este momento creo que es bueno hacer un repaso de lo obtenido, de lo que falta, de los problemas que hemos encontrado y de como enfocamos nosotros su mejora futura.<!--more--></span></p>
+<p><strong><span style="font-size: 14pt;">1) Contenido actual del catálogo</span></strong></p>
+<p><span style="font-size: 12pt;">Se han explorado los mapas de 2.350 organizaciones en 227 países. Por supuesto esta relación está sujeta a cambios constantes porque aparecen nuevos servidores y en los servidores ya explorados se añaden nuevos mapas de forma frecuente. A esto hay que añadir los mapas servidos por <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> de sus territorios y conjuntos de datos que en este momento son del orden de 17.183 mapas. </span></p>
+<p><span style="font-size: 12pt;">En la <strong>tabla 1</strong> del apartado 4 de tablas se indican los servidores identificados pero pendientes de explorar, los servidores ya explorados y que son revisados periódicamente, los mapas publicados por la organizaciones radicadas en cada territorio y los mapas publicados en cada territorio. Estos datos son diferentes porque una organización puede que solo publique mapas de su territorio, pero es habitual que una organización también publique mapas de otros territorios, por eso hay territorios que sin tener ninguna organización que publique mapas tienen mapas de organizaciones de otros territorios que sí los publican. Esta característica es habitual </span><span style="font-size: 12pt;">en las organizaciones de ámbito global dependientes de Naciones Unidas o de ONG&#8217;s, en las grandes agencias de datos de Estados Unidos y en las organizaciones de países que aún mantienen vínculos con sus ex-colonias. El ranking de territorios más publicadores está encabezado por Asia del Este, en la tabla siguiente se presentan el ranking de los territorios que publican más de 10.000 mapas:</span></p>
+<table style="height: 330px; border-collapse: collapse; width: 36.4488%;" border="2" width="18.075%" cellspacing="0" cellpadding="0">
+<colgroup>
+<col style="width: 90pt;" span="2" width="120" /> </colgroup>
+<tbody>
+<tr style="height: 45.0pt;">
+<td class="xl66" style="height: 45px; width: 63.8975%; background-color: #a6a4a4;" align="left" width="120" height="60"><strong><span style="font-size: 12pt; color: #ffffff;">Territorio</span></strong></td>
+<td class="xl66" style="border-left: none; width: 137.38%; height: 45px; background-color: #a6a4a4;" align="left" width="120"><strong><span style="font-size: 12pt; color: #ffffff;">Mapas por organización del territorio</span></strong></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Eastern Asia</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">257.859</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">United States of America</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">138.979</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Czech Republic</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">81.544</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Spain</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">66.169</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">France</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">47.322</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Italy</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">37.797</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Canada</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">23.890</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Argentina</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">22.893</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Germany</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">22.058</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Finland</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">20.398</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Denmark</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">19.523</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">New Zealand</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">18.497</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Mexico</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">18.025</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Australia</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">17.803</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Generados por urbiGIS</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">17.783</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Indonesia</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">14.683</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Colombia</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">13.938</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">Brazil</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">13.841</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td class="xl67" style="height: 15px; border-top: none; width: 63.8975%;" align="left" height="20"><span style="font-size: 12pt;">India</span></td>
+<td class="xl65" style="border-top: none; border-left: none; height: 15px; width: 137.38%;" align="right"><span style="font-size: 12pt;">12.354</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 12pt;">En la <strong>tabla 2</strong> del apartado 4 de tablas se indican los mapas agrupados por temas. En <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> hemos adoptado el enfoque de asignar cada mapa a un tema principal. Ello no quiere decir que haya mapas donde es complicado decidir cuál es su tema principal ya que pueden asignarse a dos o más temas, bueno es una decisión que adopta el explorador de mapas según su mejor criterio. El ranking de temas más frecuentes es el siguiente:</span></p>
+<table style="width: 32.7976%;" border="2" width="252">
+<tbody>
+<tr>
+<td style="width: 64.5669%; background-color: #a6a4a4;" width="172"><strong><span style="color: #ffffff; font-size: 12pt;">Tema</span></strong></td>
+<td style="width: 102.756%; text-align: right; background-color: #a6a4a4;" width="80"><strong><span style="color: #ffffff; font-size: 12pt;">Mapas</span></strong></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Clima</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">188.740</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Alimentación</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">117.151</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Planificación</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">115.796</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Cartografía histórica</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">82.130</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Cartografía  actual</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">54.008</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Ortofoto</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">37.816</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Unidades Administrativas</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">37.057</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Transporte y Movilidad</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">27.880</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Hábitats</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">20.901</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Geología</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">20.863</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Fauna</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">20.819</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Aguas superficiales</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">17.987</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Riesgos de inundación</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">16.584</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Medio marino</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">16.225</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Espacios protegidos</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">11.914</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">11.218</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Demografía</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">10.967</span></td>
+</tr>
+<tr>
+<td style="width: 64.5669%;"><span style="font-size: 12pt;">Agricultura</span></td>
+<td style="width: 102.756%; text-align: right;"><span style="font-size: 12pt;">10.903</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 12pt;">En la tabla siguiente</span><span style="font-size: 12pt;"> se agrupan los mapas según el formato de publicación y ganan los formatos de png por goleada.</span></p>
+<table style="height: 240px; border-collapse: collapse; width: 22.35%;" border="2" width="12%" cellspacing="0" cellpadding="0">
+<colgroup>
+<col style="width: 60pt;" span="2" width="80" /> </colgroup>
+<tbody>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%; background-color: #a6a4a4;" align="left" width="80" height="20"><strong><span style="color: #ffffff; font-size: 12pt;">Formato</span></strong></td>
+<td style="width: 123.125%; height: 15px; background-color: #a6a4a4;" align="left" width="80"><strong><span style="color: #ffffff; font-size: 12pt;">Mapas</span></strong></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">application/json</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">10.562</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">image/gif</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">11.926</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">image/jpeg</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">252</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">image/jpgpng</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">1</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">image/png</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">324.670</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">image/png8</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">311.649</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">image/tiff</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">JPG</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">53</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">JPGPNG</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">JSON</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">7.078</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">pdf</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">11</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">PNG</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">19.021</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">PNG24</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">222</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">PNG32</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">35.0391</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15px; width: 61.25%;" align="left" height="20"><span style="font-size: 12pt;">PNG8</span></td>
+<td style="height: 15px; width: 123.125%;" align="right"><span style="font-size: 12pt;">10.081</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 12pt;">En la tabla siguiente se agrupan los mapas según el tipo de servicios y vemos que son los ImageWMS e ImageArcGISRest los que predominan, aunque se suele decir que ImageWMS es un tipo de servicio que será sustituido por WMTS o TMS la realidad es que a día de hoy es el tipo preponderante.</span></p>
+<table style="border-collapse: collapse; width: 21.8219%;" border="2" width="120pt" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%; background-color: #a6a4a4;" align="left" width="80" height="20"><strong><span style="color: #ffffff; font-size: 12pt;">Tipo</span></strong></td>
+<td style="width: 96.4351%; background-color: #a6a4a4;" align="left" width="80"><strong><span style="color: #ffffff; font-size: 12pt;">Mapas</span></strong></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">BingMaps</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">6</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">FeatureServer</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">7.073</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">GeoJSON</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">387</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">Google</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">Here</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">ImageArcGISRest</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">308.355</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">ImageMapGuide</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">1</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">ImageWMS</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">505.578</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">ImageWMSNoTile</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">43.322</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">KML</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">85</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">OSM</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">OSMXML</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">Stamen</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">TileArcGISRest</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">89.919</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">TileWMS</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">75.691</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">Tomtom</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">VectorTileServer</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">12</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">WFS Vector</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">10.190</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">WMTS</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">5.139</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">WMTS_Arnaiz</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">64</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">XYZ</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">XYZArcGIS</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">70</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">Yandex</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 15.0pt;">
+<td style="height: 15pt; width: 61.2975%;" align="left" height="20"><span style="font-size: 12pt;">Zoomify</span></td>
+<td class="xl65" style="width: 96.4351%;" align="right"><span style="font-size: 12pt;">1</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>2) Previsiones de crecimiento</strong></span></p>
+<p><span style="font-size: 12pt;">Tenemos identificados 2.620 servidores de mapas sin explorar frente a los 2.351 ya explorados, por lo tanto es previsible que el catálogo actual al menos se duplique una vez explorados todos los identificados, sin contar los servidores nuevos que se identifiquen hasta completar la exploración de esos 2.620. Si la publicación de mapas sigue a este ritmo no es descartable que haya más de tres millones de mapas en formatos abiertos disponibles en el mundo en dos o tres años.</span></p>
+<p><span style="font-size: 12pt;">La capacidad de <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> para proporcionar una plataforma gratuita y estable en la nube para alojamiento y publicación de mapas nos gustaría que fuese un factor determinante de ese crecimiento.</span></p>
+<p><span style="font-size: 14pt;"><strong>3) Problemas detectados</strong></span></p>
+<p style="padding-left: 40px;"><span style="font-size: 12pt;">a) Existen miles de servidores que no publican sus mapas en formatos abiertos, en la mayoría de las ocasiones estoy seguro que no es por la voluntad de los propietarios de los datos y mapas sino por la selección de una plataforma técnica propietaria que no está diseñada para hacerlo o que lo impide de forma explícita. La actual filosofía de Internet en la que cuenta el posicionamiento como el objetivo prioritario, más allá del interés o utilidad de contenido, determina que esta forma de publicar mapas no cambie, sino que se incremente, al menos cuando el publicador es una organización privada que acude a plataformas técnicas de pago para publicar sus datos. Frente a esto hay muchas plataformas técnicas sin ánimo de lucro ni posicionamiento que facilitan la publicación de datos y mapas abiertos, nosotros aportamos <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> como una de ellas.</span></p>
+<p style="padding-left: 40px;"><span style="font-size: 12pt;">b) La configuración y el mantenimiento de los servidores de mapas no siempre cumple con unos estándares mínimos: no se aportan metadatos, los títulos de las layers son crípticos y no contienen una descripción, los servidores se caen y pasan días o semanas hasta que se reactivan, en muchos casos la velocidad de conexión es muy baja, es habitual que una misma layer esté publicada varias veces en el mismo servidor formando parte de distintas composiciones y con diferentes nombres&#8230;</span></p>
+<p style="padding-left: 40px;"><span style="font-size: 12pt;">c) Las técnicas de harvesting están bien desarrolladas pero solo son útiles si los servidores están bien estructurados y metadatados, mientras esto no sea así seguirá siendo necesario un sistema de exploración guiada como el que utilizamos en <span style="text-decoration: underline;"><span style="color: #3366ff; text-decoration: underline;"><a style="color: #3366ff; text-decoration: underline;" href="https://urbigis.com">urbiGIS</a></span></span> .</span></p>
+<p style="padding-left: 40px;"><span style="font-size: 12pt;">d) Estructuras de layers mal planificadas, se alteran los nombres y títulos de las capas constantemente, cuando se actualizan capas no se guardan las capas históricas, no se utiliza el criterio de denominar «current» a la versión mas moderna para que de esa forma los usuarios no tengan que alterar sus proyectos cada vez que se actualiza una capa, no se distinguen bien las composiciones de mapas en las que cada layer es visible de forma individual de las composiciones en las que siempre es visible el conjunto aunque se invoque a una sola de sus capas. </span></p>
+<p style="padding-left: 40px;"><span style="font-size: 12pt;">e) Visualización ligada a la escala: suele ser un recurso muy utilizado cuando lo que se muestra es una combinación de mapas y cada escala tiene una combinación diferente,  el resultado suele ser excelente, las capas de menor zoom muestran datos generalizados mientras las de mayor zoom muestran datos detallados o datos que a otras escalas quedarían empastados o ilegibles. Pero cuando no es una composición sino una capa suelta, la impresión de usuario es que el sistema no funciona y es poco intuitiva la necesidad de hacer zoom para ve la capa, salvo que sea un usuario experimentado. En algunos casos el servidor presenta una imagen avisando de la escala de visualización correcta pero no es habitual.</span></p>
+<p><span style="font-size: 14pt;"><strong>4) Tablas completas</strong></span></p>
+<p><strong><span style="font-size: 12pt;">Tabla 1: Mapas por territorio y organización</span></strong></p>
+<table style="height: 5544px; width: 54.4519%;" border="1" width="54.4519%" cellpadding="2">
+<tbody>
+<tr style="height: 72px;">
+<td style="width: 34.9794%; height: 72px; background-color: #a6a4a4;"><strong><span style="font-size: 12pt; color: #ffffff;">Territorio</span></strong></td>
+<td style="width: 14.8148%; height: 72px; background-color: #a6a4a4;"><strong><span style="font-size: 12pt; color: #ffffff;">Servidores no explorados</span></strong></td>
+<td style="width: 14.8148%; height: 72px; background-color: #a6a4a4;"><strong><span style="font-size: 12pt; color: #ffffff;">Servidores ya explorados</span></strong></td>
+<td style="width: 16.7353%; height: 72px; background-color: #a6a4a4;"><strong><span style="font-size: 12pt; color: #ffffff;">Mapas por organización del país</span></strong></td>
+<td style="width: 16.7353%; height: 72px; background-color: #a6a4a4;"><strong><span style="font-size: 12pt; color: #ffffff;">Mapas referentes al país</span></strong></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Afghanistán</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">125</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">47.190</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Albania</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="width: 16.7353%; height: 24px; text-align: right;"><span style="font-size: 12pt;">87</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">107</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Algeria</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">39</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">American Samoa (AS)</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">16</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Americas</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.500</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Andorra</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">452</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">455</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Angola</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">28</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Antigua and Barbuda</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">6</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Argentina</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">72</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">22.893</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">22.896</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Armenia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">40</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Australia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">40</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">17.803</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18.526</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Austria</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">26</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">6.216</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5.665</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Azerbaijan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">25</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bahamas</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bahrain</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bangladesh</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">38</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">123</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Barbados</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">12</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Belarus</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">88</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">93</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Belgium</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">33</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">7.752</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">6.777</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Belize</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">15</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Benin</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">32</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">54</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bermuda</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bhutan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">40</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">117</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bolivia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">19</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.670</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.973</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bosnia and Herzegovina</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">326</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">341</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Botswana</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">38</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">71</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">13.841</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">19.671</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Brunei</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Bulgaria</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">305</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">358</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Burkina Faso</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">213</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">135</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Burundi</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">30</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">149</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Cambodia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">21</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">195</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Cameroon</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">22</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">79</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">23.890</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">25.339</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Cape Verde</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">206</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">154</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Central African Republic</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">12</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Chad</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">22</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Chile</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">25</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.152</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.452</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">China</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">19</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.480</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.400</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Colombia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">60</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">13.938</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">15.268</span></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 34.9794%; height: 48px;"><span style="font-size: 12pt;">Commonwealth of the Northern Mariana Islands (MP)</span></td>
+<td style="text-align: right; width: 14.8148%; height: 48px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 48px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 48px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 48px;"><span style="font-size: 12pt;">12</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Comoros</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">78</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Cook Islands</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Costa Rica</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">17</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">890</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">969</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Côte d&#8217;Ivoire</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.444</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.452</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Croatia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">7</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.186</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.336</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Cuba</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">23</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">53</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Cyprus</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">174</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">576</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Czech Republic</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">39</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">81.544</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">81.531</span></td>
+</tr>
+<tr style="height: 48px;">
+<td style="width: 34.9794%; height: 48px;"><span style="font-size: 12pt;">Democratic People&#8217;s Republic of Korea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 48px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 48px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 48px;"><span style="font-size: 12pt;">159</span></td>
+<td style="text-align: right; width: 16.7353%; height: 48px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Democratic Republic of the Congo</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">51</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Denmark</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">40</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">19.523</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14.247</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Djibouti</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">44</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Dominica</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">28</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Dominican Republic</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">165</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">370</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Eastern Asia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">257.859</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Ecuador</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">27</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.838</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.072</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Egypt</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.588</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">El Salvador</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5.343</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">649</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Equatorial Guinea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Eritrea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">42</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Estonia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">11</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.980</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.985</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Eswatini</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">38</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Ethiopia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">198</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Europe</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.440</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Federated States of Micronesia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Fiji</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">392</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">396</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Finland</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">81</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">20.398</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18.270</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">France</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">100</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">47.322</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">42.212</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">French Polynesia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">11</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">French Guyane</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.204</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Gabon</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">14</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.902</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">204</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Gambia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">83</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">97</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Georgia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">65</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">93</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Germany</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">121</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">22.058</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">22.509</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Ghana</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">28</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">209</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Gibraltar</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">138</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Greece</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">21</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8.877</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8.994</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Grenada</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Guam</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">37</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Guatemala</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">285</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">349</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Guernsey</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">43</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Guinea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">7</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Guinea Bissau</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">34</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Guyana</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Haiti</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">89</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Honduras</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">164</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">238</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Hong Kong</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.622</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Hungary</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5.563</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5.525</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Iceland</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">12</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.285</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.412</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">India</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">19</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">12.354</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">12.438</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Indonesia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">47</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14.683</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14.868</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Iran</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.232</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.280</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Iraq</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">11</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Ireland</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">16</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.509</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.884</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Island</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">305</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Israel</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">8</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.506</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.523</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Italy</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">71</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">37.797</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">36.113</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Jamaica</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">23</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Japan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">647</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">673</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Jersey</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Jordan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">519</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">550</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Kazakhstan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">6</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.360</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.340</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Kenya</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">8</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.758</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">845</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Kiribati</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Kosovo</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Kuwait</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">510</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">518</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Kyrgyzstan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">159</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">187</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Lao People&#8217;s Democratic Republic</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">17</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Latin America and the Caribbean</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">272</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Latvia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">250</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">265</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Lebanon</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">38</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Lesotho</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">45</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Liberia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">21</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Libya</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Liechtenstein</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">69</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">76</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Lithuania</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">16</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.838</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.851</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Luxembourg</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">809</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">798</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Macao</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">577</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Madagascar</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">90</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">117</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Malawi</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">98</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Malaysia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">8</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.770</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.825</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Maldives</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Mali</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">145</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Malta</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">512</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">625</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Marshall Islands</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Mauritania</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">20</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Mauritius</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">14</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Melanesia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">13</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Mexico</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">29</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18.025</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">25.932</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Moldova</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">894</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">899</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Mongolia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">34</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">101</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Montenegro</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Morocco</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">66</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Mozambique</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">116</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">314</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Myanmar</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">61</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">101</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Namibia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">71</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">45</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Nauru</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Nepal</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.417</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.235</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Netherlands</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">123</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">9.443</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8.422</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">New Caledonia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">617</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.478</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">New Zealand</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">38</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18.497</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18.346</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Nicaragua</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">510</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">551</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Niger</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">32</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Nigeria</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">293</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">333</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">North Macedonia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.360</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.379</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Norway</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">35</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">9.773</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8.686</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Oceania</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Oman</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">339</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">344</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Pakistan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">785</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">36.693</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Palau</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">11</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Palestina</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">7</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">17</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Panama</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">123</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">216</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Papua New Guinea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">0</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">0</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">19</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Paraguay</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">177</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">183</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Peru</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">24</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.541</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.884</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Philippines</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.410</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.526</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Poland</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">119</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.517</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.625</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Portugal</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">31</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8.728</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">9.146</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Puerto Rico (PR)</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">558</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Qatar</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">440</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">577</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Republic of Congo</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">137</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">44</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Republic of Korea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">6.191</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">6.220</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Romania</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">20</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.613</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.769</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Russian Federation</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">33</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">126</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">114</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Rwanda</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">67</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">293</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">San Marino</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Saint Lucia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Saint Kitts and Nevis</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.044</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Saint Pierre and Miquelon</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Saint Vincent and the Grenadines</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Samoa</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">16</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Sao Tome and Principe</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Saudi Arabia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">206</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.731</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Senegal</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">114</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Serbia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">6</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">19</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Seychelles</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">27</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Sierra Leone</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">40</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Singapore</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">12</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">9</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Slovakia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">13</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.231</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.141</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Slovenia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">8</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.009</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.761</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Solomon Islands</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Somalia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">31</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">100</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">South Africa</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">17</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">89</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">South Sudan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">123</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Spain</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">464</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">66.169</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">73.283</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Sri Lanka</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">0</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">54</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">87</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Sudan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">127</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Suriname</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Svalbard and Jan Mayen</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Sweden</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">64</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">594</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">582</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Switzerland</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">77</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">7</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.393</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.309</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Syrian Arab Republic</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">29</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Taiwan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">28</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Tanzania</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">236</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Trinidad y Tobago</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Tajikistan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">27.538</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Thailand</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">35</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">44</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">83</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Timor-Leste</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">14</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.371</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">32</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Togo</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Tokelau</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Tonga</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Trinidad and Tobago</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">9</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Tunisia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">170</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">185</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Turkey</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">11</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">746</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">819</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Turkmenistan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">8</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Tuvalu</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Uganda</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">5</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">168</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Ukraine</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">6</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">112</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Unión de Naciones Suramericanas</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">39</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Unión Europea</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">12</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.751</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">908</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">United Arab Emirates</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">9</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.655</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">707</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">United Kingdom</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">64</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">16</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3.698</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">2.799</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">United States of America</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2.000</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">259</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">138.979</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">149.736</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Uruguay</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">17</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.330</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">4.379</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Uzbekistan</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">10</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Vanuatu</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">37</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">18</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Venezuela</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">1</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">4</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">466</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">493</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Viet nam</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">82</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Wallis and Futuna Islands</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">World</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">16</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">6.176</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">157.550</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Yemen</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">34</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Zambia</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">58</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Zimbabwe</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">56</span></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Generados por urbiGIS</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">17.783</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"></td>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 34.9794%; height: 24px;"><span style="font-size: 12pt;">Total</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2.620</span></td>
+<td style="text-align: right; width: 14.8148%; height: 24px;"><span style="font-size: 12pt;">2.351</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.045.899</span></td>
+<td style="text-align: right; width: 16.7353%; height: 24px;"><span style="font-size: 12pt;">1.045.899</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 12pt;">Tabla 2 Mapas por temas</span></strong></p>
+<table style="width: 49.4526%;" border="1" width="456">
+<tbody>
+<tr>
+<td style="width: 43.7363%; background-color: #a6a4a4;" width="210"><span style="font-size: 12pt;"><strong><span style="color: #ffffff;">Tema</span></strong></span></td>
+<td style="width: 36.2637%; background-color: #a6a4a4;" width="166"><span style="font-size: 12pt;"><strong><span style="color: #ffffff;">SubTema</span></strong></span></td>
+<td style="width: 58.0105%; background-color: #a6a4a4;" width="80"><span style="font-size: 12pt;"><strong><span style="color: #ffffff;">Mapas</span></strong></span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="16"><span style="font-size: 12pt;">Actividad</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Acción social</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">821</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Alimentación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">117.151</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Asentamientos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.204</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Caza</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">359</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Construcción</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">85</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Demanda eléctrica</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Demanda hídrica</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">141</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Demografía</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">10.967</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Economía</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.588</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Empleo</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">20</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Energía</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">6.861</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Fondos de ayudas al desarrollo</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">60</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Pesca</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.983</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Propiedad</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">9.286</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Turismo</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.166</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">73</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="23"><span style="font-size: 12pt;">Calidad ambiental</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Áreas con déficits o conflictos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">96</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Calidad de las aguas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.118</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Calidad del aire</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">5.586</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Calidad del suelo</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">787</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Calidad social</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Calidad urbana</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">38</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Contaminación lumínica</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">151</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Contaminación radiológica</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">109</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Especies invasivas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">411</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Incendios</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.336</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Monitorización</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.711</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos de incendio</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">599</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos de inundación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">16.584</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos funcionales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">67</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos geológicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.735</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos naturales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">5.342</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos químicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">18</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos sanitarios</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">25</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riesgos Tecnológicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">109</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Ruido</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.892</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Terrenos abandonados</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Vulnerabilidad</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">242</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">6.551</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="7"><span style="font-size: 12pt;">Cartografía</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Cartografía  actual</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">54.008</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Cartografía histórica</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">82.130</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Direcciones</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.258</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Ortofoto</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">37.816</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Ortofoto última</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">27</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Toponimia</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.352</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">10.776</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="6"><span style="font-size: 12pt;">Datos de la Organización</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Actividades de la Organización</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">774</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Activos de la Organización</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">51</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Proyectos de la Organización</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.072</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sedes de la Organización</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">151</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Territorios de la Organización</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">70</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">71.993</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="8"><span style="font-size: 12pt;">Gobierno</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Calidad de Gobierno</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.541</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Mantenimiento</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">760</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Proyectos y Actuaciones</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">195</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Unidades Administrativas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">37.057</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Unidades Censales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.074</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Unidades Económicas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">918</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Unidades Estadísticas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.168</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">11.218</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="18"><span style="font-size: 12pt;">Infraestructuras</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Aguas pluviales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.262</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Aguas residuales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.766</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Alumbrado</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">547</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Cerramientos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Edificación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.402</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Electricidad</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.075</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Geotérmicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.950</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Hidraúlicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.007</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Hidrocarburos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.208</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Manzanas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.160</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Mobiliario</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">560</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Residuos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.596</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Riego</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">330</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Suministro de agua</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">7.057</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Telecomunicaciones</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.506</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Térmicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">172</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Transporte y Movilidad</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">27.880</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.852</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="13"><span style="font-size: 12pt;">Naturaleza</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Aguas subterráneas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.203</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Aguas superficiales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">17.987</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Clima</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">188.740</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Fauna</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">20.819</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Geología</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">20.863</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Hábitats</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">20.901</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Medio marino</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">16.225</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Paisaje</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.748</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Relieve submarino</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.775</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Relieve terrestre</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">7.255</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Suelos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">7.961</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Vegetación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.999</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.495</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="25"><span style="font-size: 12pt;">Ocupación del suelo</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Acuicultura</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">509</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Agricultura</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">10.903</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Aparcamiento</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">497</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Áreas Naturales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">33</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Áreas Rurales</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">63</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Áreas Urbanas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.142</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Comercio</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.441</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Cultura</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.868</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Deporte</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.455</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Educación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.759</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Equipamientos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">2.007</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Espacios de baño</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">729</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Industria</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.038</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Investigación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">552</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Minería, gas y petróleo</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.747</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Ocio y recreo</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">587</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Oficinas</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">145</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Parques</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.710</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Salud</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">5.184</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Seguridad</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">5.644</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Servicios públicos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.352</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Silvicultura</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">5.166</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Viario</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.299</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Vivienda</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">1.360</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">9.887</span></td>
+</tr>
+<tr>
+<td style="width: 43.7363%;" rowspan="8"><span style="font-size: 12pt;">Planificación</span></td>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Espacios protegidos</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">11.914</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Patrimonio Cultural</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">4.474</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Patrimonio Natural</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">967</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Planificación actual</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">43.803</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Planificación histórica</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">3.773</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Planificación urbana en tramitación</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">93</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Servidumbre</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">19</span></td>
+</tr>
+<tr>
+<td style="width: 36.2637%;"><span style="font-size: 12pt;">Sin subtema</span></td>
+<td style="text-align: right; width: 58.0105%;"><span style="font-size: 12pt;">7.809</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;">Ignacio Arnaiz Eguren</span></p>
+<p><span style="font-size: 12pt;">Director</span></p>
+

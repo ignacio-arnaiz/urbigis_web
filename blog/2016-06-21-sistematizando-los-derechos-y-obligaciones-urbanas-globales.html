@@ -1,0 +1,82 @@
+<!--
+title: Los Derechos y Obligaciones Urbanas Globales (Sistematizando con urbiTHINGS)
+date: 2016-06-21
+slug: sistematizando-los-derechos-y-obligaciones-urbanas-globales
+-->
+<p><span style="font-size: 12pt;"><!--:es--></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">En las entradas anteriores <a href="http://www.arnaizpartners.com/blogarnaizpartners/?p=826#more-826">(Sistematizando la Planificación urbana global</a> y <a href="http://www.arnaizpartners.com/blogarnaizpartners/?p=861">Sistematizando la Ejecución urbana global</a>) realicé un resumen de cómo <strong>urbiTHINGS</strong> aporta sistemas de planificación y ejecución urbanas que permiten visualizar capas continuas y globales de ordenación y forma urbanas, formadas por la yuxtaposición de los planes municipales y objetos, gracias a la utilización de Grupos de Entidad, Atributos y Relaciones de Equivalencia de ámbito global.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">En esta entrada se describe cómo utilizar la misma técnica para construir capas globales sobre los Derechos y Obligaciones urbanas, una Ontología que será también fundamental para construir Indicadores dinámicos, mapas y servicios de datos globales de estos aspectos urbanos.<!--:--><!--more--><!--:es--></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">La metodología de trabajo utiliza los mismos elementos que en el caso de la Planificación y de los Objetos: los Instrumentos de cambio urbano como fuente transaccional de datos, las Entidades como objetos espaciales que describen el mundo agrupadas en “Grupos de Entidades”, los Atributos como características o propiedades de esas Entidades y las Relaciones como nexo entre todos ellos, también agrupadas en “Grupos de Relación”.</span></p>
+<h1><span style="color: #ff0000; font-size: 12pt;">Inventario de Derechos</span></h1>
+<p style="text-align: justify;"><span style="font-size: 12pt;">Contiene todas las Entidades jurídicas que determinan la existencia de un Derecho sobre un Objeto. Para cada Derecho inventariado se establece una Relación con los Objetos a los que afecta. Hay tres posibles casos:</span></p>
+<ul>
+<li>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><strong>Titular único</strong>: se establece una sola Relación con el Objeto que corresponda, Relación que implícitamente se extiende a todos los demás Objetos que ese Suelo contenga.</span></p>
+</li>
+</ul>
+<p style="padding-left: 30px;"><img decoding="async" class="alignnone size-full wp-image-2899" src="https://info.urbigis.com/wp-content/uploads/2016/06/25.png" alt="" width="713" height="347" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/25.png 713w, https://info.urbigis.com/wp-content/uploads/2016/06/25-300x146.png 300w" sizes="(max-width: 713px) 100vw, 713px" /><span style="font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura29.png"><img decoding="async" class="aligncenter size-full wp-image-916" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura29.png" alt="" width="814" height="384" /></a></span></p>
+<ul>
+<li>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><strong>Proindiviso</strong><span style="font-weight: 300;">: se establece un Derecho para cada titular con su correspondiente Relación con el objeto Suelo, cada Relación incluye como Atributo su cuota correspondiente.</span></span></p>
+</li>
+</ul>
+<p style="padding-left: 30px;"><img decoding="async" class="alignnone size-full wp-image-2900" src="https://info.urbigis.com/wp-content/uploads/2016/06/26.png" alt="" width="681" height="341" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/26.png 681w, https://info.urbigis.com/wp-content/uploads/2016/06/26-300x150.png 300w" sizes="(max-width: 681px) 100vw, 681px" /><span style="font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura30.png"><img decoding="async" class="aligncenter size-full wp-image-917" style="border-color: #bbbbbb; background: #eeeeee;" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura30.png" alt="" width="784" height="367" /></a></span></p>
+<ul>
+<li>
+<div><span style="font-size: 12pt;"><strong>División horizontal</strong><span style="font-weight: 300; text-align: justify;">: en este caso se pueden dar a su vez dos casos:</span></span></div>
+</li>
+</ul>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><strong>Bien descrita</strong>: cuando se dispone de la descripción espacial de todos los objetos contenidos dentro de una construcción: viviendas, trasteros, locales, plazas de garaje y espacios comunes. De forma que se pueda dar de alta un Derecho y tantas Relaciones sean necesarias con los objetos contenidos y sus cuotas de participación.</span></p>
+</li>
+</ol>
+</li>
+</ol>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><img decoding="async" class="alignnone wp-image-2902 size-full" src="https://info.urbigis.com/wp-content/uploads/2016/06/27.png" alt="" width="740" height="501" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/27.png 740w, https://info.urbigis.com/wp-content/uploads/2016/06/27-300x203.png 300w" sizes="(max-width: 740px) 100vw, 740px" /></span></p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><strong>Mal descrita</strong><span style="font-weight: 300;">: cuando no se dispone de la descripción espacial de dicho contenido, en cuyo caso se trata como un proindiviso normal.</span></span></p>
+</li>
+</ol>
+</li>
+</ol>
+<h1><span style="color: #3366ff; font-weight: bold; font-size: 12pt;">Grupos de Entidad</span></h1>
+<p><span style="font-size: 12pt;">Se establece un Grupo de Entidad para cada tipo de Derecho inventariable:</span></p>
+<p><img decoding="async" class="wp-image-2903 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/28.png" alt="" width="605" height="568" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/28.png 702w, https://info.urbigis.com/wp-content/uploads/2016/06/28-300x282.png 300w" sizes="(max-width: 605px) 100vw, 605px" /><span style="font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura33.png"><img decoding="async" class="aligncenter size-full wp-image-920" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura33.png" alt="" width="694" height="759" /></a></span></p>
+<h1><span style="color: #3366ff; font-size: 12pt;">Atributos de Entidad</span></h1>
+<p><img decoding="async" class="wp-image-2904 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/30.png" alt="" width="582" height="408" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/30.png 700w, https://info.urbigis.com/wp-content/uploads/2016/06/30-300x210.png 300w" sizes="(max-width: 582px) 100vw, 582px" /></p>
+<h1><span style="color: #3366ff; font-size: 12pt;"><span style="font-weight: 300;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura34.png"><img decoding="async" class="aligncenter size-full wp-image-921" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura34.png" alt="" width="695" height="583" /></a></span></span></h1>
+<h1><span style="color: #3366ff; font-weight: bold; font-size: 12pt;">Grupos de Relación</span></h1>
+<h1><span style="color: #3366ff; font-size: 12pt;"><span style="font-weight: 300;"><span style="color: #000000;">Las relaciones de los Derechos de Dominio sobre los elementos del Inventario de Objetos son del tipo Aplicación de un Derecho.</span></span></span></h1>
+<ul>
+<li><strong style="font-size: 12pt; color: #666666;">Origen aplica un Derecho a Destino (de Entidades)</strong><span style="font-size: 12pt; color: #666666;">: sirven para enlazar Entidades del Inventario de derechos con Entidades de cualquier otro Inventario.</span></li>
+<li><span style="font-size: 12pt;"><strong>Origen Afecta a Destino (de Instrumentos, Atributos, Entidades, Ámbitos o Relaciones)</strong>: sirven para establecer relaciones de afección.</span></li>
+</ul>
+<h1><span style="color: #3366ff; font-size: 12pt;">Atributos de Relación</span></h1>
+<h1><span style="color: #3366ff; font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura35.png"><img decoding="async" class="wp-image-2905 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/31.png" alt="" width="628" height="220" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/31.png 700w, https://info.urbigis.com/wp-content/uploads/2016/06/31-300x105.png 300w" sizes="(max-width: 628px) 100vw, 628px" /><img decoding="async" class="aligncenter size-full wp-image-922" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura35.png" alt="" width="692" height="206" /></a></span></h1>
+<h1><span style="font-size: 12pt;"><strong> <span style="color: #ff0000;">Inventario de Obligaciones</span></strong></span></h1>
+<p><span style="font-size: 12pt;">Contiene todas las Entidades jurídicas que determinan la existencia de una Obligación  sobre un Objeto. Para cada Obligación inventariada se establece una Relación de aplicación de Obligación con los Objetos a los que afecta.</span></p>
+<p><span style="font-size: 12pt;">Una misma Obligación puede afectar a simultáneamente tantos Objetos como sea necesario y a cualquier Grupo de Entidad.<span style="font-weight: 300;"> </span></span></p>
+<p><img decoding="async" class="size-full wp-image-2906 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/32.png" alt="" width="496" height="653" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/32.png 496w, https://info.urbigis.com/wp-content/uploads/2016/06/32-228x300.png 228w" sizes="(max-width: 496px) 100vw, 496px" /><span style="font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura36.png"><img decoding="async" class="aligncenter size-full wp-image-923" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura36.png" alt="" width="506" height="635" /></a></span></p>
+<h1><span style="color: #3366ff; font-size: 12pt;">Grupos de Entidad</span></h1>
+<p><img decoding="async" class="wp-image-2907 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/33.png" alt="" width="610" height="109" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/33.png 703w, https://info.urbigis.com/wp-content/uploads/2016/06/33-300x54.png 300w" sizes="(max-width: 610px) 100vw, 610px" /><span style="font-weight: 300; font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura37.png"><img decoding="async" class="aligncenter size-full wp-image-924" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura37.png" alt="" width="695" height="144" /></a></span></p>
+<h1><span style="color: #3366ff; font-size: 12pt;">Atributos de Entidad</span></h1>
+<p><img decoding="async" class="wp-image-2908 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/34.png" alt="" width="607" height="564" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/34.png 779w, https://info.urbigis.com/wp-content/uploads/2016/06/34-300x278.png 300w, https://info.urbigis.com/wp-content/uploads/2016/06/34-768x713.png 768w" sizes="(max-width: 607px) 100vw, 607px" /></p>
+<h1><span style="color: #3366ff; font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/libro1.xls-Hoja3-a1TOc212.png"><img decoding="async" class="aligncenter size-full wp-image-927" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/libro1.xls-Hoja3-a1TOc212.png" alt="" width="569" height="969" /></a>Grupos de Relación</span></h1>
+<p><span style="font-size: 12pt;">Las relaciones de los Derechos de Dominio sobre los elementos del Inventario de Objetos son del tipo Aplicación de un Derecho.</span></p>
+<ul>
+<li><span style="font-size: 12pt;"><strong>Origen aplica una Obligación a Destino (de Entidades)</strong>: sirven para enlazar Entidades del Inventario de Obligaciones con Entidades de cualquier otro Inventario.</span></li>
+<li><span style="font-size: 12pt;"><strong>Origen Afecta a Destino (de Instrumentos, Atributos, Entidades, Ámbitos o Relaciones)</strong>: sirven para establecer relaciones de afección.</span></li>
+</ul>
+<h2><span style="color: #3366ff; font-size: 12pt;">Atributos de Relación</span></h2>
+<p><img decoding="async" class="wp-image-2909 aligncenter" src="https://info.urbigis.com/wp-content/uploads/2016/06/35.png" alt="" width="598" height="148" srcset="https://info.urbigis.com/wp-content/uploads/2016/06/35.png 757w, https://info.urbigis.com/wp-content/uploads/2016/06/35-300x74.png 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
+<p><span style="font-size: 12pt;"><a href="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura38.png"><img decoding="async" class="aligncenter size-full wp-image-928" src="http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2016/06/captura38.png" alt="" width="764" height="222" /></a>Ignacio Arnaiz Eguren</span></p>
+<p><span style="font-size: 12pt;">Director de Innovación</span></p>
+<p><span style="font-size: 12pt;">Arnaiz Urbimática SL</span></p>
+<p><span style="font-size: 12pt;"> </span><!--:--></p>
+
