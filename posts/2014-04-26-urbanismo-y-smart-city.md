@@ -1,0 +1,183 @@
+---
+title: "Urbanismo y Smart City"
+date: "2014-04-26"
+excerpt: "El fenómeno de la ciudad inteligente o Smart (hay una cierta controversia sobre lo que quiere decir smart pero dejémoslo en inteligente)  emerge en los últimos años de la mano de las nuevas tecnología"
+---
+
+El fenómeno de la ciudad inteligente o Smart (hay una cierta controversia sobre lo que quiere decir smart pero dejémoslo en inteligente)  emerge en los últimos años de la mano de las nuevas tecnologías. Pero es curioso observar que para los tecnólogos parece como si las ciudades hubiesen aparecido sobre la faz de la tierra ya construidas y además «tontas», como un fenómeno extraño, inmutable e incomprensible sobre el que ellos están llamados a poner orden e inteligencia, un «Nuevo Orden» digital. Siempre es interesante recordar el blog de [José Fariña](http://elblogdefarina.blogspot.com.es/2012/01/smart-cities-los-inventos-del-tbo.html) sobre Smart City que pone un dedo descarnado sobre este tema.
+
+Es frecuente que dos ámbitos de conocimiento se ignoren entre si durante mucho tiempo y cuando convergen en un momento dado se sorprendan mutuamente de la existencia del otro. Pues entre las TIC y la ciudad existe una relación similar.
+
+Las ciudades son entes que crecen y cambian constantemente mediante procesos muy lentos, son como los niños, sólo te das cuenta del cambio cuando han pasado un tiempo desde la última vez que los viste. En el caso de la ciudad a veces deben pasar muchos años para notar los cambios. En contraste la tecnología cambia en días o semanas. Seguramente por eso los tecnólogos tienden a pensar en la ciudad como algo estable e inmutable necesitado de su saber, pero sencillamente es que viven a distinta velocidad.
+
+Los urbanistas, en el otro lado, no entienden la tecnología ni ven su relación con la ciudad, es cierto que se adoptan continuamente nuevos materiales de construcción y nuevas infraestructuras, que hay antenas y telefonía móvil, que la domótica permite optimizar el gasto energético y muchas otras cosas. Pero son fenómenos epidérmicos, el fondo no cambia: la planificación, la redistribución de las cargas y beneficios, la ejecución de la urbanización y la edificación, la autorización y vigilancia del uso, el mantenimiento y conservación de la ciudad… Esos son los grandes procesos urbanos que lentamente van cambiando y formando la ciudad y que están anclados en la estructura urbanística, jurídica, administrativa, económica y social de la ciudad.
+
+Pero lo paradójico es que Urbanismo y Smart City son en gran parte sinónimos, todo urbanista pretende que el proceso constructivo de la ciudad sea un proceso inteligente y todo tecnólogo debe darse cuenta de que actúa contra un enorme ecosistema que tiene sus propias y muy inteligentes reglas de comportamiento, algunas creadas en el albor de los tiempos, cuando nacieron las primeras ciudades.
+
+La idea de este blog es analizar hasta que punto los nuevos paradigmas tecnológicos pueden ayudar o influir en el trabajo de urbanista y también cuáles son los condicionantes urbanos con los que se encontrará el tecnólogo cuando se enfrente a la City real.
+
+**Los procesos de ciudad y la tecnología**
+
+Para efectuar ese análisis he diferenciado la transformación de la ciudad en tres procesos convergentes: el desarrollo planificado, la adaptación urbana y el mantenimiento urbano.
+
+1) El** desarrollo** **planificado** corresponde a la definición y ejecución de las operaciones que crean o renuevan la ciudad. Decimos que crean cuando la ciudad ocupa espacio rústico desbordando sus límites actuales y que renuevan cuando la ciudad se construye destruyendo porciones de ciudad envejecida preexistente.
+
+La técnica de planificación y ejecución de la ciudad, en el caso de España, nace de la legislación del suelo, es por tanto un proceso perfectamente reglado y debe ser así ya que es un factor determinante de la economía urbana y de las virtudes o defectos de nuestras ciudades. Se efectúa por dos agentes principales: el gobierno local y regional que determina el Plan y los gestores urbanos que lo ejecutan.
+
+El Plan es el resultado colaborativo y participativo del análisis de las necesidades previstas que determina al final una solución de crecimiento o renovación, en su redacción intervienen equipos humanos multidisciplinares muy especializados y son procesos que duran años. La técnica urbanística de confección de los Planes ha ido evolucionando poco a poco para asegurar que sus determinaciones formarán una ciudad moderna, de alta calidad de vida y a la vez mas sostenible y respetuosa con el medio. Sin duda ya es un proceso inteligente y adecuado para planificar la ciudad.
+
+2) La **adaptación** **urbana** corresponde a la definición y ejecución de dos formas de operación: la **adaptación planificada** cuando el Plan concreta y define la necesidad de remodelar de forma individual los edificios de una zona porque no se ajustan al escenario de ciudad previsto o la **adaptación no planificada** cuando el Plan no contempla ninguna acción concreta de remodelación, pero la dinámica de la ciudad finalmente la ejecuta. Estos procesos de adaptación urbana pueden aprovecharse para trasladar conceptos de Smart City a la ciudad ya existente.
+
+Los procesos de adaptación de la ciudad existente a nuevos escenarios planificados o no, son muy lentos ya que sólo dependen para su ejecución de la voluntad del propietario del suelo o del edificio, que la ejerce en función de criterios personales o coyunturales. El Plan normalmente sólo exige la adaptación cuando el propietario remodela profundamente o reconstruye por completo el edificio.
+
+3) El** mantenimiento urbano** corresponde al conjunto de operaciones y servicios que se ocupan de asegurar el correcto estado y funcionamiento de todos los elementos que forman la ciudad. Incluye tanto el mantenimiento de los servicios, espacios y construcciones de carácter público como de los privados. Está sujeto a un mecanismo de vigilancia e inspección que verifique su idoneidad.
+
+Seguramente es el aspecto urbano que puede beneficiarse en mayor medida de adoptar tecnología, puesto que gran parte de estos elementos son de carácter físico y susceptibles de ser monitorizados y ajustados de forma remota.
+
+Será objeto de los siguientes apartados explicar con detalle las oportunidades que hay de introducir conceptos de Smart City en la planificación, el desarrollo, la adaptación y el mantenimiento de las ciudades, porque estimo que el despliegue de la ciudad inteligente debe ir necesariamente de la mano de los procesos normales y ya establecidos de transformación y conservación de la ciudad, procesos que se incardinan perfectamente en esa estructura jurídica, administrativa, económica y social ya existente en la ciudad.
+
+**Desarrollo, Adaptación y Smart City**
+
+Las operaciones de desarrollo y adaptación urbana se verifican mediante tres etapas o fases sucesivas: la planificación, la gestión y la ejecución. Estará en función del grado de intensidad del cambio y de su tipo, si es un desarrollo o una adaptación, cuando se pueden producir los tres de forma encadenada o se limite a la gestión y ejecución o únicamente a la ejecución.
+
+**1) Planificación**
+
+Es claro que la planificación emerge como el cimiento sobre el que es posible definir una nueva ciudad con criterios modernos de sostenibilidad y eficiencia. En los últimos años se ha producido abundante literatura sobre planificación y sostenibilidad, y también se ha avanzado mucho en la definición de indicadores urbanos, tarea en la que destaca el equipo de Salvador Rueda.
+
+Como base de los criterios de planificación sostenible es imprescindible acudir al documento [Libro Blanco del Planeamiento Sostenible](http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2014/04/Libro-Blanco-del-Planeamiento-Sostenible.pdf) publicado por el Ministerio de la Vivienda en 2010, redactado por José Fariña y José Manuel Naredo. Contiene una relación muy completa de cuales deben ser las condiciones de diseño urbano moderno y creo que todas son aplicables al concepto de ciudad inteligente.
+
+También es de enorme interés la presentación de Salvador Rueda  en las jornadas de Nuevos retos y buenas prácticas urbanas de 2008 sobre [Una ciudad mas sostenible en un modelo de ciudad del conocimiento](http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2014/04/Nuevos-retos-y-buenas-prácticas-urbanas-de-Salvador-Rueda.pdf) . O el [Plan Especial de Sostenibilidad de Sevilla](http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2014/04/Plan-Especial-de-Sostenibilidad-de-Sevilla.pdf).
+
+Pero además de este movimiento, imprescindible para dotar a la planificación de un enfoque más actual, hay algunas acciones complementarias que estimo como necesarias:
+
+- 
+**Planificación digital**: los planes actualmente son instrumentos en papel lo que dificulta su confección y publicación. En esta era de Internet los planes deben ser información digital en todo su ciclo de vida. El programa [«Urbanismo en Red»](http://urbanismoenred.es) proporciona un entorno digital que resuelve de forma completa y satisfactoria ese problema.
+
+- 
+**Registro digital de Planeamiento**: es preciso implementar sistemas de gestión de los instrumentos de Planificación mediante la instauración de bases de datos de carácter jurídico que contengan y custodien la documentación de los planes, verifiquen su vigencia y dispongan de los medios para gestionar su publicidad. En este aspecto también el programa de Urbanismo en Red antes citado provee de las herramientas tecnológicas adecuadas para conseguirlo, proporcionando los medios para que la ordenación vigente refundida se actualice por procedimientos automatizados y se publique de forma inmediata. (véase [Planeamiento digital](http://www.arnaizpartners.com/blogarnaizpartners/?p=148) y [Registro digital de Planeamiento](http://www.arnaizpartners.com/blogarnaizpartners/?p=286) en este mismo blog). Es posible ver sus resultados en visores geográficos como el de [Cuenca](http://planeamiento.cuenca.es/Visor/).
+
+- 
+**Planificación simplificada**: sin alterar los procedimientos y modos propios de los planes españoles, es posible reducir su complejidad mediante procesos de normalización de sus contenidos de forma que se limite la actual dispersión conceptual y estructural de los planes y se hagan más inteligibles y precisos. Aún es demasiado importante la carga interpretativa del plan, aspecto que genera inseguridad jurídica y es fuente de corrupción. (véase [Planeamiento masivo](http://www.arnaizpartners.com/blogarnaizpartners/?p=450) en este mismo blog)
+
+- 
+**Planificación dinámica**: los planes tienen un mecanismo poco ágil de adaptación a la realidad y las necesidades cambiantes. El desarrollo de observatorios y cuadros de mando sobre los resultados de la aplicación de los planes, conectados con los procesos administrativos de control de ejecución, deben proporcionar medios de retroalimentación que permitan incrementar la velocidad de reacción de la ordenación ante disfunciones o nuevas necesidades. Eso no significa que cambie sustancialmente la formulación y tramitación de las modificaciones, sino que se mejoren su análisis, justificación, discusión y si es posible sus plazos de aprobación.
+
+- 
+**Planificación colaborativa**: la tecnología está conectando a la ciudadanía con los procesos de planificación. La participación ciudadana va mucho más allá del tablón de anuncios y la alegación, porque quiere y necesita intervenir en los procesos de transformación de su ciudad, iniciativas como [Urbanleaks](http://urbanleaks.org/) o [Ciudad Escuela](http://ciudad-escuela.org/) y blogs como el de [Urbano Humano](http://urbanohumano.org/) son sólo algunos ejemplos de como la sociedad civil se interesa por la ciudad como espacio vital y por la planificación como el instrumento para mejorarlo.
+
+Asistimos con todo ello a la aparición de una plétora de conceptos emergentes que afectan a la Planificación como el Participacionismo, Empoderamiento, Urbanismo efímero, Urbanismo emergente, Adhocracia, Comunidad Real, Cultura P2P, Ciudad compartible, Ciudad del Conocimiento, Innovación social y muchos otros, todos ligados a resaltar los nuevos modos de relación entre la ciudad y los ciudadanos.
+
+**2) Gestión**
+
+La ciudad es en si misma un objeto más del mercado capitalista, un mercado en el que el Ayuntamiento es el poder competente de regulación y control, poder que ejerce mediante los diversos instrumentos de planificación, autorización e inspección. Sin ellos la ciudad obedecería únicamente a las leyes del mercado y sus efectos letales pueden verse en muchas ciudades del tercer mundo.
+Los procesos de gestión son los que determinan el reparto de los beneficios y los costes del proceso de transformación, condicionan el éxito del proceso urbano al beneficio esperable. Sin beneficio no hay procesos de transformación de la ciudad, salvo que sea la inversión pública quien se haga cargo de los costes.
+
+Debido a este carácter clave en el éxito del proceso, la gestión está sujeta a una regulación jurídica y económica muy estricta y poco puede aportar la tecnología, aunque hay defectos que deben ser subsanados.
+
+El conocimiento preciso de los derechos reales existentes sobre el suelo y la edificación y de su titularidad, es una condición imprescindible para que el proceso de gestión arranque y discurra adecuadamente. En el sistema español esta información reside en la institución del Registro de la Propiedad, sin embargo nuestro Registro, aún reconociendo su calidad jurídica, es peculiar debido a su génesis y tiene dos características curiosas: es voluntario y las fincas son descritas de forma literal por el declarante sin que el registrador pueda verificar su veracidad geográfica.
+
+La existencia de un Registro de la Propiedad sin soporte gráfico deriva de las circunstancias económicas y técnicas existentes en el momento de su creación y no de la intención expresa de sus creadores. En aquel momento se crea un Registro voluntario con descripción literal de las fincas porque no había dinero ni medios para construir un Registro obligatorio con descripción gráfica de las fincas.
+
+La posterior creación del Catastro, con su expresión gráfica separada del Registro de la Propiedad, creo que deriva de una necesidad recaudatoria urgente que soslaya los inevitables retrasos que supondría la modificación del Registro ya existente. El Registro ya lleva camino andado y cambiarlo retrasaría la implantación de un impuesto sobre los bienes inmuebles.
+
+Por tanto en España la situación actual del Registro y el Catastro no responden a una concepción racional de cómo construir un Registro de derechos que incluya la exacción de impuestos sobre dichos derechos, sino a la solución de necesidades coyunturales con los medios existentes en cada momento.
+
+Además están sobre la mesa las nuevas necesidades que plantea la racionalización de las administración y la aplicación de las nuevas tecnologías que están abordando la posibilidad de crear un registro de la propiedad central y la digitalización de su información, en un contexto europeo que está desarrollando sistemas de información territorial que incluyen datos sobre los derechos de la propiedad inmobiliaria.
+
+Así que si estamos en época de mudanzas, quizá es el momento de tomar al toro por los cuernos y replantearse la modificación de un sistema bicéfalo que ya no tiene mucho encaje en este mundo.
+
+Desde mi punto de vista hay algunas opciones a plantear:
+
+- 
+El Registro de la Propiedad debería convertirse en obligatorio: anotar todas las transacciones sobre derechos en el momento en que se producen y que en caso contrario pueda dar lugar a una sanción administrativa. Es muy fuerte ya que supone echar abajo todo el sistema de transmisión privada de derechos.
+
+- 
+El Registro de la Propiedad debería incluir la descripción gráfica de los terrenos e inmuebles que inscribe. Por tanto la base gráfica de la propiedad debería residir en el Registro.
+
+- 
+Los medios técnicos disponibles y la racionalidad organizativa del sistema aconsejan que la base registral sea única para todo el territorio, consolidando los actuales registros en una base central que asegure la coherencia espacial de los datos. Este aspecto suscita una fuerte oposición entre muchos registradores que ven socavada su función, sin embargo estimo que el valor añadido que aporta la figura del registrador es su garantía personal y jurídica avalando la calificación, y no tanto como custodio de una documentación concebida con un criterio decimonónico o gestor de un sistema informático propio.
+
+- 
+La existencia de un Catastro que aplica un impuesto que grava la propiedad se justifica mientras el Registro no abarque la totalidad del territorio ni sea obligatorio, pero una vez superado ese impedimento es preciso redefinir su función.
+
+- 
+El Catastro efectúa en este momento cinco operaciones básicas para definir el impuesto: establece gráficamente e identifica la superficie sujeta a gravamen, identifica el sujeto pasivo, valora el inmueble, define un índice de impuesto y por último lo liquida. Estimo que las dos primeras deberán ser asumidas por el Registro de la Propiedad puesto que será el único órgano capacitado para identificar al propietario de un derecho real y dispondrá de una base gráfica que determina con precisión la superficie de la finca. Además el Catastro actual únicamente valora y percibe por los derechos de propiedad, pero esta modificación permitiría valorar y percibir impuesto por otros derechos reales inscritos: servidumbres, censos, hipotecas…
+
+- 
+Está claro que la valoración y fijación de los índices es una función que escapa de las asignables al Registro, por tanto deberá seguir existiendo un órgano fiscal especializado, no tengo muy claro si debe ser estatal, regional o municipal. Me inclino por el ámbito regional que resolvería la incardinación en el sistema del País Vasco y Navarra.
+
+- 
+Y por último en cuanto a la liquidación también me inclino por que la siga efectuando ese órgano fiscal regional, aunque el Registro está efectuando con eficacia funciones de liquidación de impuestos y podría añadirlos sin problemas a su función.
+
+Estas modificaciones implican fuertes inversiones públicas para:
+
+- 
+Construir la base registral central consolidando los libros de todos los registros actuales (una vez finalizada los libros pasarán a un archivo histórico centralizado como el de Simancas)
+
+- 
+Conciliar la base catastral con la registral, ampliando de oficio el Registro hasta cubrir todo el territorio basándose en las parcelas catastrales y corrigiendo las inscripciones registrales no ajustadas a la realidad territorial. Sustitución del sistema actual de identificación de fincas registrales basado en oficina, libro, tomo, folio, finca y de referencias catastrales por un identificador único de finca basado en [ucodes](http://en.wikipedia.org/wiki/Ucode_system) proporcionados por el sistema de registro central.
+
+- 
+Trasladar toda la funcionalidad catastral que gestiona las mutaciones de catastro al nuevo Registro central y fusionarlas con los procedimientos registrales de inscripción de títulos, lo que implica que el título no solo porta las operaciones registrales habituales sino también las gráficas, es decir las definidas en las actuales declaraciones catastrales 901-N, 902-N, 903-N y 904-N.
+
+- 
+Establecer como obligatorio el Título digital de forma que sirva como fuente de datos para efectuar las operaciones alfanuméricas y gráficas en el Registro central, aportando al notario un sistema de redacción del Título digital que asegure la calidad de su contenido y verifique que sus operaciones serán practicables en el Registro central una vez calificadas por el registrador. En este sentido los actuales proyectos de reparcelación y compensación deben formularse desde su concepción como Títulos digitales, de forma que se unifique en un documento único el titulo reparcelatorio con el proyecto reparcelatorio que contenga en formato transaccional las operaciones a efectuar sobre el Registro de la Propiedad.
+
+- 
+Construir un nuevo sistema gestor del Registro que permita a los registradores desde sus oficinas calificar y efectuar las operaciones de inscripción contenidas en el Título digital contra el Registro central, tanto en lo que respecta a las anotaciones registrales como las alteraciones gráficas de las fincas. El sistema debería preservar la capacidad del registrador para conservar una copia personal de las inscripciones calificadas por él, en orden a que pueda verificar que no han sido alteradas sin su consentimiento por el registro central y por lo tanto no arriesgue su credibilidad y patrimonio personal por operaciones informáticas en sistemas remotos que no controla personalmente.
+
+- 
+Trasladar toda la funcionalidad gráfica del Catastro al nuevo Registro central (OVC, cartografía, servicios de mapas…) y reformar la base catastral reduciéndola a la definición de las zonas de valor e índices y a los procesos de liquidación del impuesto
+
+- 
+Unificar la ficha catastral y la nota simple registral, creando un sistema geográfico de consulta que permita acceder al máximo de información útil para el buen funcionamiento del mercado inmobiliario y para explotar al máximo las oportunidades de venta de inmuebles: hay que replantearse que datos son públicos y que datos son privados. Los precios de las últimas transmisiones y la identificación de titulares o de sus representantes serían datos muy útiles.
+
+- Cambiar toda la legislación hipotecaria y catastral para adecuarla al nuevo sistema.
+
+Además, desde un punto de vista de la administración local los instrumentos de gestión urbanística deben formar un **Registro digital de Proyectos de Gestión** mediante la instauración de bases de datos de carácter jurídico que contengan y custodien la documentación de los proyectos, verifiquen su vigencia y dispongan de los medios para gestionar su publicidad. Este Registro proveerá de los sistemas para mantener el Parcelario municipal, en coordinación con Catastro y Registro de la Propiedad o del organismo que debería resultar de su racionalización.
+
+El Parcelario municipal además es la fuente de información de dos subsistemas vitales para el municipio:
+
+- 
+El sistema de Patrimonio Municipal de Suelo y toda su dinámica. De gran interés por su repercusión económica en el presupuesto municipal.
+
+- 
+El sistema de Callejero como base fundamental de georreferenciación de la actividad urbana.
+
+**3) Ejecución**
+
+Ya existe una regulación detallada sobre Edificación sostenible y que se concreta en la Ley 38/1999, de 5 de noviembre, de Ordenación de la Edificación (LOE) y el Código Técnico de la Edificación (CTE), donde se establece como uno de los requisitos básicos de la edificación, que los edificios se proyecten de tal forma que no se deteriore el medio ambiente y de que se consiga un uso racional de la energía necesaria para la utilización del edificio, mediante el ahorro de ésta y el aislamiento térmico.
+
+Además hay innumerables acciones de edificación sostenible orientadas a la definición de acciones que afecten a la reglamentación relacionada con la edificación sostenible. Al desarrollo de métodos específicos, acordes con las características climáticas, geográficas y constructivas españolas, para evaluación del impacto medioambiental de la edificación en su entorno. Estudios encaminados a la preparación de un Libro Blanco sobre edificación sostenible en España que sirva de base para la creación de un Plan Nacional de edificación sostenible y al fomento de la incorporación de los principios del desarrollo sostenible en el sector edificatorio.
+
+Es de resaltar la [Guía de edificación sostenible del País Vasco](http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2014/04/Guia-edificacion-sostenible-Pais-Vasco.pdf) donde se detallan muchas medidas de mejora de la sostenibilidad de la edificación y la urbanización de enorme interés.
+
+Por tanto los planes, mas que detallar las condiciones constructivas y funcionales que debe cumplir el edificio, debe centrarse en cuáles son las condiciones urbanas del entorno en el que ese edificio debe funcionar.
+
+En todo caso hay acciones de mejora tecnológica que deben tenerse en cuenta:
+
+- 
+**Proyectos de ejecución digitales**: la administración local debe exigir que la presentación de proyectos de edificación y urbanización se realice en formato digital con las siguientes condiciones: 1) cumplirá con la especificación [CityGML](http://www.opengeospatial.org/standards/citygml) del la OGC, 2) estará georreferenciado sobre el estándar cartográfico que se exija.3) Indicará en formato transaccional las operaciones que efectúa sobre la edificación y urbanización existentes, de forma que sea posible el mantenimiento automatizado de sistemas de información urbana a partir de esos proyectos (véase [Geotransacciones](http://www.arnaizpartners.com/blogarnaizpartners/?p=257) en este mismo blog).
+
+- 
+**Registro digital de Proyectos de Ejecución**, de igual forma que los instrumentos de planeamiento y gestión, todos los proyectos de ejecución urbanística debe ser inscritos en un Registro que controle su situación y publicación y sea capaz de ejecutar las geotransacciones contenidas en los proyectos digitales de forma que el sistema de información pueda mantener actualizados la geometría y atributos de todos los objetos urbanos.
+
+**Mantenimiento urbano y Smart City**
+
+La ciudad ejecutada en virtud de las etapas de desarrollo y adaptación, la ciudad en uso, es un ecosistema, en este blog hemos comentado como la tecnología puede ayudar a su conocimiento y control. Son innumerables los sistemas, aplicaciones, soluciones e innovaciones que están creándose para controlar la ciudad.
+
+Ya empieza a ser una oportunidad de negocio construir bases de datos que permitan acceder a proveedores de soluciones a todos los que quieran información sobre estos sistemas.
+
+La capacidad del mercado para mejorar la oferta parece inagotable, en la entrada [¿Vamos bien encaminados para llegar a la ciudad inteligente?](http://www.arnaizpartners.com/blogarnaizpartners/?p=510) de este blog hago un análisis de como debería ser la hoja de ruta para construir la ciudad inteligente, una ruta de abajo arriba, porque serán las cosas que forman la ciudad las que deben adquirir inteligencia.
+
+Debéis tener en cuenta que yo soy biólogo, por tanto mi enfoque es muy organicista. Desde los orgánulos intracelulares hasta los grandes ecosistemas la naturaleza nos ofrece ejemplos de innumerables niveles de control y retroalimentación que construyen enormes sistemas complejos a partir de piezas sencillas. La ciudad debería imitar ese comportamiento.
+
+Si el mercado es el medio para que la ciudad en uso, la ciudad a mantener, adquiera ese matiz «Smart», parece claro que la oferta está formada por la legión de proveedores de ideas y soluciones que pretendemos ganarnos la vida en este negocio, pero… ¿quien forma la demanda?. En la entrada del blog antes mencionado decía que los clientes deben ser los propietarios de las cosas que forman la ciudad, empezando por el mismo Ayuntamiento. Y que el éxito del producto estará en función de su utilidad, atractivo tecnológico y precio, en fin como cualquier otro producto del mercado.
+
+No se si producirá un ahorro neto total porque efectivamente el efecto rebote que comenta José Fariña como el producto de la  “paradoja de Jevons” lo hemos experimentado todos en nuestras propias carnes, pero al menos debería producir más felicidad, los mejores éxitos tecnológicos de los últimos años yo creo que tienen éxito porque sencillamente nos hacen un poco mas felices.
+
+ 
+
+**Ignacio Arnaiz Eguren **
+
+**Director de Innovación – Arnaiz & Partners SL**

@@ -1,0 +1,39 @@
+---
+title: "Datos espaciales abiertos – nuevas funciones de urbiThings"
+date: "2018-03-05"
+excerpt: "En urbiThings estamos poniendo en marcha algunas nuevas funciones que mejoran sustancialmente sus capacidades para formar una plataforma de datos espaciales abierta a todos, de ámbito global y de util"
+---
+
+En urbiThings estamos poniendo en marcha algunas nuevas funciones que mejoran sustancialmente sus capacidades para formar una plataforma de datos espaciales abierta a todos, de ámbito global y de utilización sencilla:
+
+- Reestructuración del sistema de búsqueda de servicios de mapas y datos (ya puedes consultar más de 130.000 mapas) que permite afinar con mucha más precisión lo que queremos encontrar. Son funciones abiertas accesibles sin necesidad de abrir una sesión de usuario en [urbiThings](http://urbithings.com).
+
+- Nuevas funciones de publicación, para que cualquier organización (aunque sea unipersonal) pueda subir a la plataforma de [urbiThings](http://urbithings.com) sus conjuntos de datos espaciales y a partir de ellos publicar mapas. Son funciones accesibles con solo abrir una sesión de usuario en [urbiThings](http://urbithings.com), pero registrar una Organización en [urbiThings](http://urbithings.com) (aunque sea unipersonal) es sencillo y gratuito, solo se precisa una cuenta de correo y además las Organizaciones no tienen límite en el número de usuarios internos.
+
+- Nuevo concepto de Territorios. La Unidad Administrativa definida en la versión anterior se amplía al concepto de Territorio, que no solo incluye esas unidades sino también territorios geográficos, áreas marinas, espacios protegidos, ámbitos económicos… En este momento la base de datos de territorios tiene más de 524.000 territorios tipificados y con su geometría. Esto permite referenciar los conjuntos de datos y los mapas con gran precisión contra ámbitos geográficos reales y por tanto facilitar su posterior localización.
+
+Con estas nuevas funciones [urbiThings](http://urbithings.com) aspira a convertirse en una plataforma pública de datos espaciales que permita al usuario no solo encontrar y visualizar el máximo posible de mapas y datos espaciales, gracias a su Catálogo global, sino también para que las instituciones, las empresas o las personas puedan acceder, sin coste inicial, a la posibilidad de compartir sus datos espaciales aunque no dispongan de una plataforma propia.
+
+El nuevo sistema de búsqueda se organiza en tres entornos:
+
+- El entorno de Servicios de mapas y geoinformes, permite seleccionarlos mediante la combinación de cuatro criterios: por nombre del Servicio, por Territorio vinculado, por Organización publicadora y por Tema.
+
+- El entorno de Direcciones: permite utilizar servicios base de geoposicionamiento como Google, Bing y Open Street  Map, pero además mantendrá y pondrá en uso un Catálogo específico de servicios de geoposicionamiento aportados por cualquier otra Organización. Servicios que podrán apuntar a números de calle, de parcelario, de movilidad, etc. Tanto mediante acceso a servidores remotos estándar, como el Geocoding de ArcGis, a servidores remotos específicos como los del Catastro de España o como a los creados por las Organizaciones en los servidores de geoposicionamiento de urbiThings y montados sobre el Geocode de PostGis.
+
+- El entorno de Elementos: permite seleccionar conjuntos de datos, instrumentos de gestión de inventarios, entidades de inventarios y relaciones de inventario mediante la combinación de diversos criterios, según el tipo de elemento a buscar. En todos los casos es posible descargar los elementos seleccionados en formatos estándar. Os recuerdo que los inventarios y sus instrumentos son el procedimiento de [urbiThings](http://urbithings.com) para resolver las necesidades de colaboración controlada, donde un ente territorial asume el control de un tipo determinado de objetos sobre su territorio y colabora con todos los demás agentes que actúan en su transformación para el mantenimiento del Inventario mediante Instrumentos (geotransacciones). Las funciones de geotransacción estarán disponibles en [urbiThings](http://urbithings.com) en los próximos meses. Por ahora sólo podrán utilizarse los elementos de Conjuntos de Datos.
+
+El nuevo sistema de publicación se basa en dos funciones:
+
+- Crear o importar conjuntos formados por entidades geométricas vinculadas a datos. urbiThings proporciona las herramientas de dibujo y edición precisas para crear conjuntos de datos sin necesidad de herramientas desktop y también las necesarias para importar esos conjuntos desde ficheros estándar creados mediante herramientas externas. Los conjuntos pueden ser tanto vectoriales como raster. Por ahora [urbiThings](http://urbithings.com) no proporciona herramientas de georreferenciación por eso los conjuntos raster deben estar previamente georreferenciados, para ello se recomienda el uso de qGis, una herramienta abierta de excelentes prestaciones.
+
+- Crear servicios de mapas a partir de los conjuntos de datos. De un conjunto vector pueden crearse tantos mapas temáticos como desee el usuario. De un conjunto raster lo normal es crear un único mapa. En el caso de los conjuntos vector el usuario puede definir la simbología aplicable por dos métodos: como símbolo único y como símbolo categorizado. Próximamente estará disponible el uso de simbología por el método graduado. Los mapas creados en ambos casos se sirven como WMS y por tanto pueden ser utilizados desde cualquier otra plataforma que pueda consumirlos.
+
+Además urbiThings proporcionará en pocos días en esta nueva versión tres funciones adicionales:
+
+- El acceso directo a los servicios de mapas de una Organización: permite que las Organizaciones publiquen una interfaz personalizada a sus usuarios con su Catálogo de servicios de mapas e informes precargado. Este Catálogo puede incluir servicios redirigidos desde otros servidores de datos abiertos. Sirvan como ejemplo [http://urbithings.com/Melilla.maps](http://urbithings.com/Melilla.maps) o [http://urbithings.com/Cuenca.maps](http://urbithings.com/Cuenca.maps).
+
+- El acceso directo a Selecciones de mapas: los usuarios pueden crear y guardar selecciones de mapas y transmitirlas a otros usuarios, bien como ficheros de texto o bien como accesos directos, de forma que la interfaz se adapta desde el primer momento al zoom, transparencias y orden de los mapas que componen la Selección.
+
+- El acceso directo a mapas: los usuarios pueden compartir un mapa concreto con otros usuarios de forma que la interfaz lo presente como mapa inicial.
+
+Os invito a que exploréis en [http://urbithings.com](http://urbithings.com) estas nuevas funciones, que abren interesantes vías para compartir, crear y publicar información geoespacial  Si necesitáis una ayuda inicial la podéis encontrar en [http:help.urbithings.com.](http:help.urbithings.com.) El acceso inicial es completamente gratuito, a partir de un cierto consumo de conjuntos de datos se establecen las tarifas mínimas que permitan la viabilidad económica de la plataforma y que oscilan entre 20 y 40 euros mensuales para organizaciones con necesidades pequeñas o medianas. Su alcance concreto se indica en [https://info.urbigis.com](https://info.urbigis.com)
