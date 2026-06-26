@@ -1,0 +1,133 @@
+<!--
+title: Entidades
+slug: entidad
+-->
+<div class="sl-heading-wrapper level-h4"><h4 id="características"><strong>Características</strong></h4><a class="sl-anchor-link" href="#características"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Sección titulada «Características»</span></a></div>
+<p>Son los objetos materiales o inmateriales que uThings controla sobre el territorio y que son aportados por los<a href="javascript:htLoadSlug('instrumento')"> Instrumentos </a>Operadores a los Instrumentos Inventario.</p>
+<p>Se identifican mediante un nombre y una clave y se reúnen en <a href="javascript:htLoadSlug('grupos-de-relacion')">Grupos de Entidad</a> en función del propósito del Instrumento que las crea.</p>
+<p>Las Entidades pueden estar en cinco posibles estados:</p>
+<ul>
+<li>
+<p><strong>Sin Asignar</strong>: la Entidad sólo existe dentro de un Instrumento que está “En Edición”</p>
+</li>
+<li>
+<p><strong>Vigente</strong>: la Entidad existe en este momento sobre el territorio y tiene efectos.</p>
+</li>
+<li>
+<p><strong>Suspendida</strong>: la Entidad existe en este momento sobre el territorio pero temporalmente no tiene efectos porque un Instrumento la ha suspendido, de igual forma otro Instrumento puede devolverla a Vigente.</p>
+</li>
+<li>
+<p><strong>Proyectada</strong>: la Entidad no existe en el territorio pero hay un Instrumento aprobado que pretende su implantación. Otro Instrumento puede pasarla a Vigente, Suspenderla o dejarla como Histórica.</p>
+</li>
+<li>
+<p><strong>Histórica</strong>: la Entidad ya no existe en el territorio porque un Instrumento la eliminó, aunque otro Instrumento puede devolverla a Vigente.</p>
+</li>
+</ul>
+<p>Cada Entidad puede definirse espacialmente con cuatro tipos de geometría asociada: puntual, lineal, poligonal y 3D. De tal forma que el modo de representación de la Entidad se pueda ajustar al medio de visualización, la escala y la precisión.</p>
+<p>Cada Entidad pueden contener documentos de todo tipo.</p>
+<p>A cada Entidad se pueden aplicar todos los <a href="javascript:htLoadSlug('atributo')">Atributos</a> que estén definidos en el Instrumento que la crea, en el Instrumento Inventario de destino o en el Instrumento Base sobre el que se apoya y que tengan el Grupo de la Entidad como Dominio de Aplicación. La aplicación de un Atributo en una Entidad se denomina Asignación.</p>
+<p><img src="https://help.urbigis.com/wp-content/uploads/2017/02/cap11.png" alt=""></p>
+<p> </p>
+<div class="sl-heading-wrapper level-h4"><h4 id="grupos-de-entidad"><strong>Grupos de Entidad</strong></h4><a class="sl-anchor-link" href="#grupos-de-entidad"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Sección titulada «Grupos de Entidad»</span></a></div>
+<p>Las Entidades se pueden reunir en “Grupos” en función del propósito del <a href="javascript:htLoadSlug('instrumento')">Instrumento</a> que las crea: Planeamiento, Derechos, Objetos u Obligaciones.</p>
+<p><strong>A) Grupos asignables a cualquier tipo de Instrumento:</strong></p>
+<p><a href="https://help.urbigis.com/wp-admin/admin.php?page=tablepress&amp;action=edit&amp;table_id=2">Editar</a></p>
+<p>Grupo de Entidad
+Descripción</p>
+<p><strong>Ámbito</strong>
+Corresponde a las Entidades que definen la porción espacial afectada por un Instrumento.</p>
+<p><strong>Operador</strong>
+Corresponde a Entidades instrumentales cuya única misión es portar operaciones contra otras Entidades del Inventario y que nunca llegan a formar parte del Inventario.</p>
+<p><strong>Carpeta</strong>
+Corresponde a Entidades sin función territorial ni geometría y que se usan para estructurar de forma conveniente la estructura jerárquica de las demás Entidades. De esta forma el Instrumento tiene una estructura lógica y comprensible de presentación de sus Entidades en forma de árbol.</p>
+<p><strong>B) Grupos asignables a  Instrumentos de Planeamiento:</strong></p>
+<p><a href="https://help.urbigis.com/wp-admin/admin.php?page=tablepress&amp;action=edit&amp;table_id=3">Editar</a></p>
+<p>Grupo de Entidad
+Descripción</p>
+<p><strong>Categoría</strong>
+Separar lo urbano de lo no urbano: supone responder a la pregunta de ¿dónde situar la ciudad? En España esta función corresponde al concepto de “Clasificación del suelo”, fuera de España o no existe o se utilizan conceptos similares al de clasificación.</p>
+<p><strong>Zona</strong>
+Definir la morfología urbana: supone responder a la pregunta de ¿cómo debe ser la ciudad? Es decir asignar el uso, su intensidad y la tipología de edificación y parcelación. En España corresponde al concepto de “Zonificación”, fuera de España se puede asimilar al concepto de “Zonning”.</p>
+<p><strong>Sector</strong>
+Señalar las áreas sujetas a cambio. Supone responder a las preguntas de ¿quién debe cambiar la ciudad y cuándo debe hacerlo? Para ello se delimitan áreas o sectores sujetos a acciones de renovación urbana o de nueva ciudad. En España se suelen denominar “Sectores”, “Unidades de ejecución” o “Ámbitos de Actuación”, fuera de España también tienen una denominación variopinta.</p>
+<p><strong>Protegido</strong>
+Señalar las áreas preservadas del cambio. Supone responder a la pregunta ¿que debe permanecer a salvo del cambio urbano? Para ello se delimitan áreas, edificaciones o construcciones preservadas, bien por sus valores históricos, por estar en áreas de riesgo, o por tener afecciones de cualquier tipo.</p>
+<p><strong>C) Grupos asignables a  Instrumentos de Objetos:</strong></p>
+<p><a href="https://help.urbigis.com/wp-admin/admin.php?page=tablepress&amp;action=edit&amp;table_id=4">Editar</a></p>
+<p><strong>Clase</strong>
+<strong>Grupo de Entidad</strong>
+<strong>Descripción</strong></p>
+<p><strong>Suelos</strong>
+Parcela
+Lote de Suelo No Conectivo</p>
+<p>Tramo
+Porción de Suelo Conectivo</p>
+<p>Calle
+Conjunto de Tramos con denominación toponímica</p>
+<p><strong>Construcciones</strong>
+Construcción laminar
+Revestimientos constructivos de suelo</p>
+<p>Cerramiento
+Elementos constructivos perimetrales de cierre</p>
+<p>Edificación
+Espacios construidos completamente cerrados</p>
+<p>Otras Construcciones
+Elementos constructivos abiertos</p>
+<p><strong>Instalaciones</strong>
+Conducto
+Elementos de transporte: colectores, tubos, líneas, canales, acequias</p>
+<p>Depósito
+Elementos de almacenamiento</p>
+<p>Centro de Instalación
+Elementos de producción, transformación o control</p>
+<p>Instalación puntual
+Elementos diversos de carácter puntual</p>
+<p><strong>Mobiliario</strong>
+Mobiliario poligonal
+Muebles que ocupan una superficie mensurable</p>
+<p>Mobiliario lineal
+Muebles que se disponen formando una línea</p>
+<p>Mobiliario puntual
+Muebles asimilables a un punto</p>
+<p><strong>Vegetación</strong>
+Vegetación poligonal
+Masa vegetal que ocupa una superficie mensurable</p>
+<p>Vegetación lineal
+Masa vegetal que se dispone formando una línea</p>
+<p>Vegetación puntual
+Vegetales individualizados</p>
+<p><strong>D) Grupos asignables a  Instrumentos de Derechos:</strong></p>
+<p><a href="https://help.urbigis.com/wp-admin/admin.php?page=tablepress&amp;action=edit&amp;table_id=5">Editar</a></p>
+<p><strong>Entity Group</strong>
+<strong>Description</strong></p>
+<p><strong>Domain</strong>
+Poder directo e inmediato sobre un objeto o bien</p>
+<p><strong>Servitude</strong>
+Limita el dominio de un predio denominado fundo sirviente en favor de las necesidades de otro llamado fundo dominante perteneciente a otra persona</p>
+<p><strong>Use</strong>
+Legitima para tener y utilizar una cosa o bien ajeno de acuerdo con las necesidades del usuario y, en su caso, su familia.</p>
+<p><strong>Surface</strong>
+Derecho real temporal que comprende la facultad de construir sobre el suelo, sobre el vuelo o en el subsuelo de otro, con derecho a apropiarse de lo que ha sido construido en plazo</p>
+<p><strong>Mortgage</strong>
+Derecho real de garantía, que se constituye para asegurar el cumplimiento de una obligación (normalmente de pago de un crédito o préstamo), que confiere a su titular un derecho de realización de valor de un bien</p>
+<p><strong>Score</strong>
+Capacidad de una persona de exigir a otra, con relación a la compraventa de un bien concreto, que se lo venda a él por el precio que ya tenía acordado con un tercero</p>
+<p><strong>Retract</strong>
+Derecho de adquisición preferente por el que su titular tiene la facultad de adquirir un determinado bien o derecho cuando se cumple un concreto supuesto de hecho o cuando las partes así lo hayan acordado</p>
+<p><strong>Ford</strong>
+Modificación de estructura de la acera destinada exclusivamente a facilitar el acceso de vehículos a los inmuebles</p>
+<p><strong>Activity</strong>
+Licencia municipal obligatoria para que en un local, nave u oficina se pueda ejercer una actividad comercial, industrial o de servicios</p>
+<p><strong>Work</strong>
+Licencia municipal obligatoria para realizar obras en una vivienda, local, nave u oficina</p>
+<p>E) Grupos asignables a  Instrumentos de Obligaciones:</p>
+<p><a href="https://help.urbigis.com/wp-admin/admin.php?page=tablepress&amp;action=edit&amp;table_id=6">Editar</a></p>
+<p><strong>Grupo de Entidad</strong>
+<strong>Descripción</strong></p>
+<p><strong>Conservación</strong>
+Reparación o mejora de elementos para asegurar su funcionalidad</p>
+<p><strong>Mantenimiento</strong>
+Suministro de recursos que garanticen el servicio normal</p>
+<p><strong>Servicio</strong>
+Actividades de ejecución de tareas</p>
+
