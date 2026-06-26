@@ -332,7 +332,6 @@
 
   /* ── BLOG LAYOUT ── */
   .blog-section {
-    display: none;
     background: var(--paper);
   }
   .blog-layout {
@@ -492,7 +491,6 @@
 
     /* ── HELP SECTION ── */
   .help-section {
-    display: none;
     background: var(--paper);
   }
   .help-section.active { display: flex; }
@@ -1563,27 +1561,32 @@ function showSection(which) {
 
   // Mostrar la sección elegida
   if (which === 'inicio') {
-    inicioSec.style.display = '';
+    inicioSec.style.display = 'block';
     if (navInicio) navInicio.style.color = '#FFFFFF';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else if (which === 'blog') {
-    blogSec.style.display = '';
+    blogSec.style.display = 'block';
     if (navBlog) navBlog.style.color = '#FFFFFF';
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (!blogSec.dataset.initialized) { blogInit(); blogSec.dataset.initialized = '1'; }
   } else if (which === 'help') {
-    helpSec.style.display = '';
+    helpSec.style.display = 'block';
     helpSec.classList.add('active');
     if (navAyuda) navAyuda.style.color = '#FFFFFF';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else if (which === 'legal') {
-    if (legalSec) legalSec.style.display = '';
+    if (legalSec) legalSec.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 
-// Iniciar mostrando Inicio
+// Ocultar todas las secciones al inicio y mostrar Inicio
 document.addEventListener('DOMContentLoaded', function() {
+  var secs = ['inicioSection','blog','helpSection','legalSection'];
+  secs.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
   showSection('inicio');
 });
 
