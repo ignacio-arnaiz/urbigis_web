@@ -13,12 +13,11 @@ collections:
   - name: "posts"
     label: "Entradas del blog"
     label_singular: "Entrada"
-    folder: "posts"
+    folder: "blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Resumen", name: "excerpt", widget: "text", required: false }
       - { label: "Imagen destacada", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
