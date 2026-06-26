@@ -154,7 +154,7 @@ function blogLoadIdx(idx) {
     .then(function(text) {
       text = text.replace(/^<!--[\s\S]*?-->\s*/m, '');
       let heroHtml = '';
-      if (p.img) heroHtml = '<img class="blog-article-hero" src="' + p.img + '" alt="" onerror="this.style.display='none'">';
+      if (p.img) heroHtml = '<img class="blog-article-hero" src="' + p.img + '" alt="" onerror="this.style.display=\'none\'">';
       art.innerHTML = heroHtml + '<h1>' + p.title + '</h1><div class="blog-article-body">' + text + '</div>';
       art.querySelectorAll('a[href^="http"]').forEach(function(a) {
         a.target = '_blank'; a.rel = 'noopener';
