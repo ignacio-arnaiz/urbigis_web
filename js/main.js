@@ -266,9 +266,6 @@ function htSelectLeaf(el) {
   document.getElementById('htPrev').disabled = htCurrentIdx <= 0;
   document.getElementById('htNext').disabled = htCurrentIdx >= HT_ARTICLES.length - 1;
 
-  // enlace externo
-  const url = `https://help.urbigis.com/help/${slug}/`;
-
   // Cargar artículo desde archivo tutorial/slug.html
   const htBodyEl = document.getElementById('htBody');
   htBodyEl.innerHTML = '<div class="article-loading"><div class="spinner"></div> Cargando...</div>';
