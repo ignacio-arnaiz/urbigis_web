@@ -2,7 +2,6 @@ backend:
   name: github
   repo: ignacio-arnaiz/urbigis_web
   branch: main
-  base_url: https://sveltia-cms-auth.pages.dev
 
 media_folder: "img/blog"
 public_folder: "/img/blog"
@@ -10,14 +9,28 @@ public_folder: "/img/blog"
 site_url: https://ignacio-arnaiz.github.io/urbigis_web
 
 collections:
-  - name: "posts"
-    label: "Entradas del blog"
+  - name: "blog"
+    label: "Blog"
     label_singular: "Entrada"
     folder: "blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "html"
+    format: "frontmatter"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Imagen destacada", name: "image", widget: "image", required: false }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "tutorial"
+    label: "Tutorial"
+    label_singular: "Artículo"
+    folder: "tutorial"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
