@@ -1,0 +1,45 @@
+---
+title: "Buscar Localizaciones"
+---
+
+Un Localizador es un servicio web diseñado para encontrar información geográfica. Cuando se utiliza para localizar un elemento por alguna de sus características se denomina método de localización directa, cuando se utiliza para obtener información de los elementos que existen en un punto se denomina método de localización inversa. Los Localizadores tienen muchos ámbitos de aplicación, los más usuales son:
+
+- Ubicar direcciones, servicios y puntos de interés en servicios de callejero
+- Localizar bienes inmuebles (parcelas y construcciones) a efectos catastrales.
+- Geoposicionar objetos urbanos fijos y móviles.
+
+En [urbiGIS](https://urbigis.com) este juego de localizar cosas es constante, se buscan territorios, mapas, geoinformes, conjuntos de datos, instrumentos o documentos, siempre por ambos métodos. Para hacerlo [urbiGIS](javascript:showSection('help')) se basa en dos tipos de Localizadores: los suministrados por servidores ajenos a [urbiGIS](javascript:showSection('help')) y los suministrados por el propio [urbiGIS](javascript:showSection('help')). Entre los primeros los más utilizados son los sistemas globales de navegación por GPS, hace años exclusivos de los navegadores con coste como TomTom,  y hoy día convertidos en servicios gratuitos incluidos en el software estándar de los smartphones como GoogleMap y OpenStreetMap. Pero además, aunque son mucho menos conocidos, todos los sistemas GIS en Internet proporcionan servicios de localización de elementos geográficos de cualquier naturaleza, definidos y estructurados para resolver los problemas específicos de cada organización o persona que los construye y publica, aunque suelen estar embebidos en las funciones de búsqueda dentro de sus geoportales.
+
+En España son de uso común los Localizadores de parcelas catastrales servidos por la Dirección de Catastro de España, o los proporcionados por Cartociudad de direcciones postales. Los usuarios de [urbiGIS](javascript:showSection('help')) también pueden crear de forma sencilla e inmediata servicios de Localización contra sus Conjuntos de Datos o Instrumentos. Con todos ellos, tanto los propios como los ajenos, [urbiGIS](javascript:showSection('help')) construye un catálogo de Localizadores que pueden ser invocados para encontrar de forma directa o inversa elementos geográficos.
+
+En consecuencia la pestaña de Localizadores tiene una doble función que es preciso comprender para su correcto uso. Por una parte nos permite buscar y seleccionar servicios de Localización y una vez seleccionados nos permite invocarlos para encontrar algo, el sistema efectúa la petición a esos servicios y lo que ellos devuelven se presenta en la Lista de Resultados.
+
+#### Seleccionar los Localizadores
+
+Si se accede a [urbiGIS](javascript:showSection('help')) de forma estándar, sin entrar en un geoportal ([véanse los modos de acceso a urbiGIS](javascript:htLoadSlug('acceso-a-urbithings'))), estarán seleccionados por defecto un conjunto de Localizadores (denominados “Base” en [urbiGIS](javascript:showSection('help'))) que proporcionan servicios de Direcciones y Topónimos en todo el mundo. Naturalmente disponen de mejor información en unos países que en otros según la transparencia y disponibilidad de datos de cada uno. Se puede comprobar cuáles están activos pulsando el icono \*\*![](img/tutorial/2.1.12-Busqueda-Avanzada-14.jpg) \*\*en el panel del Buscador de Localizadores que abrirá la lista de Localizadores:
+
+![](img/tutorial/Captura47.png)
+
+En [urbiGIS](javascript:showSection('help')) hemos activado esos Localizadores por defecto porque su uso es gratuito, existen otros como los de Google que tienen un coste de uso y por ello no se utilizan. Si no se desea utilizar alguno de ellos se puede desactivar en el recuadro izquierdo. Moviendo la lista hacia abajo se pueden revisar los existentes en ese momento en el catálogo de [urbiGIS](javascript:showSection('help')). Dado que su número es creciente a medida que se descubren en Internet o los usuarios de [urbiGIS](javascript:showSection('help')) crean nuevos se pueden filtrar por cuatro conceptos: por Nombre del Localizador, por uno o varios Territorios en los que actúan, por una o varias Cuentas que figuren como sus propietarias o por uno o varios Temas al que se hayan asignado.
+
+Si se accede a [urbiGIS](javascript:showSection('help')) a través del Geoportal de una Cuenta y ésta dispone de Localizadores propios entonces serán éstos los que estén activos y filtrados en la lista de Localizadores. Para utilizar otros será necesario eliminar esa condición de filtro y activar alguno otro de los existentes.
+
+#### Utilizar los Localizadores
+
+Una vez que se han seleccionado los Localizadores a utilizar (normalmente ya vienen activados por defecto), existen dos formas de uso como se indicó al principio del tema:
+
+**Búsqueda Directa**: se utilizará el recuadro de texto para introducir una cadena de caracteres a buscar, su contenido será acorde con el tipo de Localizador que esté activo, si es de Direcciones deberá ser un nombre de calle o un topónimo, si es, por ejemplo, de códigos de parcela deberá ser una secuencia de números, es decir un texto coherente con la naturaleza del Localizador que esté activo. Las peticiones a los localizadores se inician en cuanto se han introducido los tres primeros caracteres. Como se observa en la imagen el texto “Mi calle” ha producido 10 resultados que se presentan en la Lista de Resultados:
+
+![](img/tutorial/Captura49.png)
+
+**Búsqueda inversa**: en este caso se utilizará el pincho situado a la derecha del texto de búsqueda, cuando está activo ese pincho, el sistema espera que se haga clic en una posición del mapa, una vez obtenidas las coordenadas del clic se envían a los localizadores y de la misma forma que antes presentarán sus resultados:
+
+![](img/tutorial/Captura50.png)
+
+#### Resultados
+
+Las localizaciones obtenidas por las consultas a los Localizadores activos se presentan en la lista de Resultados. Su contenido viene determinado por la organización o persona que haya publicado el Localizador. Al hacer clic en cualquiera de los items de la lista de resultados el sistema hará zoom a su localización y presentará un punto, una línea o un polígono dependiendo de la geometría a la que apunte ese Localizador.
+
+En la barra de encabezado de la lista de Resultados existe un \*\*Control de Anulación \*\*que elimina tanto el criterio de selección de Localizadores como la visualización en el mapa de su resultado.
+
+![](img/tutorial/Captura51.png)
