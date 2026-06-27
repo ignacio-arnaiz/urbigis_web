@@ -16,7 +16,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "html"
-    format: "frontmatter"
+    format: "yaml-frontmatter"
+    frontmatter_delimiter: ["<!--", "-->"]
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
@@ -30,7 +31,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "html"
-    format: "frontmatter"
+    format: "yaml-frontmatter"
+    frontmatter_delimiter: ["<!--", "-->"]
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
