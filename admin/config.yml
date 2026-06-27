@@ -15,9 +15,7 @@ collections:
     folder: "blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "html"
-    format: "yaml-frontmatter"
-    frontmatter_delimiter: ["<!--", "-->"]
+    extension: "md"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
@@ -30,9 +28,7 @@ collections:
     folder: "tutorial"
     create: true
     slug: "{{slug}}"
-    extension: "html"
-    format: "yaml-frontmatter"
-    frontmatter_delimiter: ["<!--", "-->"]
+    extension: "md"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
