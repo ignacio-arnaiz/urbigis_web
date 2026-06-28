@@ -2,7 +2,7 @@
 title: "Dividir Escritorio"
 ---
 
-Cuando se trabaja desde el Escritorio de [urbiGIS](http://urbiGIS.com/) , normalmente trabajamos con un &uacute;nico escritorio, pero es &uacute;til tener la posibilidad de comparar visualmente un escenario con mapas distintos. Para ello se puede utilizara la funci&oacute;n de Dividir Escritorio, a la que se accede desde el men&uacute; de opciones ![](img/tutorial/menu-bolas-68x300.png) del Mapa Base en el Encabezado o desde la herramienta de Dividir Escritorio:
+Cuando se trabaja desde el Escritorio de [urbiGIS](http://urbiGIS.com/) , normalmente trabajamos con un &uacute;nico escritorio, pero es &uacute;til tener la posibilidad de comparar visualmente un escenario con mapas distintos. Para ello se puede utilizara la funci&oacute;n de Dividir Escritorio, a la que se accede desde el men&uacute; de opciones  del Mapa Base en el Encabezado o desde la herramienta de Dividir Escritorio:
 
 ![](img/tutorial/Captura11.png) ![](img/tutorial/Captura12.png)
 
