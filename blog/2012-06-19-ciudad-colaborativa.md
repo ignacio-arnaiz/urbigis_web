@@ -1,5 +1,5 @@
 ---
-title: "Ciudad colaborativa"
+title: Ciudad colaborativa
 date: 2012-06-19
 ---
 
@@ -9,7 +9,7 @@ Internet ha proporcionado un modo nuevo de construir conocimiento y compartir in
 - La construcción de enciclopedias, de repositorios de conocimiento, es una actividad que casi ha eliminado del mercado a la enciclopedia tradicional, incapaz de mantener el ritmo de actualización que le marcan centenares de miles de personas colaborando en mantener una wikipedia o proyectos similares.
 - Incluso en ámbitos tan especializados como los mapas, OpenStreetMap es un excelente ejemplo, las comunidades de usuarios están suplantando eficazmente a los organismos geográficos creando información geográfica utilizable.
 
-![](http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2012/06/OpenStreetMap.png "OpenStreetMap")![](https://info.urbigis.com/wp-content/uploads/2012/06/89.png)
+![](https://info.urbigis.com/wp-content/uploads/2012/06/89.png)
 
 Son sólo tres ejemplos de un universo de colaboración que se llama de muchas formas: coworking, crowsourcing, crowfunding, geonetwork, que se extiende viralmente y que acelerará, sin duda, la velocidad a la que se genera y comparte el conocimiento.
 
@@ -20,11 +20,11 @@ Para conseguirlo son necesarias dos acciones:
 1) Diseñar métodos, lugares y medios donde la ciudad se exponga como centro de esta nueva cultura de colaboración:
 
 - - Centros de Innovación y creatividad
-  - Centros de convivencia y coworking
-  - Laboratorios de vida (Living Labs)
-  - Planificación colaborativa: agentes de toda clase participan en el diseño de la ciudad para poder sincronizar los ritmos de cambio social con los ritmos de cambio urbano
-  - Regeneración y crecimiento urbano colaborativo: nuevos barrios sostenibles
-  - Colaboración público-privada: la ciudad es cosa de todos
+    - Centros de convivencia y coworking
+    - Laboratorios de vida (Living Labs)
+    - Planificación colaborativa: agentes de toda clase participan en el diseño de la ciudad para poder sincronizar los ritmos de cambio social con los ritmos de cambio urbano
+    - Regeneración y crecimiento urbano colaborativo: nuevos barrios sostenibles
+    - Colaboración público-privada: la ciudad es cosa de todos
 
 2) Dar personalidad a la ciudad como ente inteligente, creando también nuevas formas de relación entre los seres humanos y la ciudad y de los propios elementos de la ciudad entre sí, porque la asignación de conocimiento y capacidad de comunicación a las cosas que forman la ciudad ya se ha iniciado y abrirá un mundo inmenso de posibilidades de interacción y de relación.
 
@@ -36,7 +36,7 @@ Una ciudad como Madrid es un enorme puzzle de millones de piezas individualizabl
 
 La inteligencia de la ciudad como un ente será una propiedad emergente de la inteligencia combinada e interactiva de los millones de elementos que la forman. En ese momento los ciudadanos serán socios de su ciudad y se habrá alcanzado el sueño de una ciudad colaborativa.
 
-Ignacio Arnaiz Eguren [![](http://www.arnaizpartners.com/blogarnaizpartners/wp-content/uploads/2012/06/LinkedIn_16x16.png "Ignacio Arnaiz Eguren")](http://es.linkedin.com/pub/ignacio-arnaiz/27/b3b/442)
+Ignacio Arnaiz Eguren 
 
 Director de Innovación – Arnaiz Consultores
 
