@@ -2,7 +2,7 @@
 title: "Vista previa de Mapas"
 ---
 
-La herramienta vista previa ![](img/tutorial/search-zoom-150x150.png) permite visualizar el aspecto de un mapa, antes de incluirlo en el Escritorio.
+La herramienta vista previa  permite visualizar el aspecto de un mapa, antes de incluirlo en el Escritorio.
 
 Desde el Buscador, en el panel de herramientas, cuando (por el m&eacute;todo que consideremos) tengamos los resultados de los mapas, cuando queramos que se nos muestre la vista previa de un mapa, pulsaremos en el men&uacute; de opciones ![](img/tutorial/menu-bolas-68x300.png) del mapa en cuesti&oacute;n y activaremos la Vista previa.
 
