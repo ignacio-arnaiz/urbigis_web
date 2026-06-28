@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>urbiGIS · Editor</title>
+<script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js" referrerpolicy="origin"></script>
+<style>
+:root {
+  --ink: #0D1117;
+  --paper: #FFFFFF;
+  --surface: #F7F7F5;
+  --border: #E5E5E2;
+  --accent: #70A6B8;
+  --accent-dark: #4A8FA6;
+  --muted: #888785;
+  --sans: 'Space Grotesk', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+  --nav-h: 52px;
+  --sidebar-w: 280px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); background: var(--surface); color: var(--ink); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+/* NAV */
+nav {
+  height: var(--nav-h); background: var(--ink);
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0 1.25rem; flex-shrink: 0;
+  border-bottom: 1px solid #1E2530;
+}
+.nav-logo { color: white; font-weight: 700; font-size: 1rem; letter-spacing: -0.02em; text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-badge { font-size: 0.68rem; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: #8B95A1; padding: 0.2rem 0.5rem; border: 1px solid #2A3240; border-radius: 3px; }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 0.75rem; }
+.btn { padding: 0.4rem 1rem; border-radius: 4px; font-family: var(--sans); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.15s; border: 1.5px solid; }
+.btn-ghost { background: none; border-color: #2A3240; color: #8B95A1; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn-primary:disabled { opacity: 0.45; cursor: default; }
+.btn-danger { background: none; border-color: #E5534B; color: #E5534B; }
+.btn-danger:hover { background: #E5534B; color: white; }
+
+/* LOGIN */
+#loginScreen {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  background: var(--surface);
+}
+.login-card {
+  background: var(--paper); border: 1px solid var(--border);
+  border-radius: 8px; padding: 2.5rem; width: 380px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.login-card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem; }
+.login-card p { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.6; }
+.login-card label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.login-card input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--border); border-radius: 4px; font-family: var(--sans); font-size: 0.9rem; outline: none; }
+.login-card input:focus { border-color: var(--accent); }
+.login-card .btn { width: 100%; margin-top: 1rem; padding: 0.6rem; font-size: 0.9rem; }
+.login-error { color: #E5534B; font-size: 0.82rem; margin-top: 0.75rem; display: none; }
+
+/* MAIN LAYOUT */
+#appScreen { flex: 1; display: none; overflow: hidden; flex-direction: row; }
+
+/* SIDEBAR */
+.sidebar {
+  width: var(--sidebar-w); background: var(--paper);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; overflow: hidden; flex-shrink: 0;
+}
+.sidebar-tabs {
+  display: flex; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.sidebar-tab {
+  flex: 1; padding: 0.75rem; text-align: center;
+  font-size: 0.78rem; font-weight: 600; cursor: pointer;
+  color: var(--muted); border-bottom: 2px solid transparent;
+  transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.sidebar-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.sidebar-search { padding: 0.75rem; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.sidebar-search input { width: 100%; padding: 0.45rem 0.65rem; border: 1px solid var(--border); border-radius: 4px; font-family: var(--sans); font-size: 0.82rem; outline: none; background: var(--surface); }
+.sidebar-search input:focus { border-color: var(--accent); background: white; }
+.sidebar-list { overflow-y: auto; flex: 1; }
+.sidebar-item {
+  padding: 0.6rem 0.9rem; cursor: pointer;
+  border-left: 2px solid transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.12s;
+}
+.sidebar-item:hover { background: var(--surface); }
+.sidebar-item.active { border-left-color: var(--accent); background: rgba(112,166,184,0.08); }
+.sidebar-item-date { font-size: 0.65rem; font-family: var(--mono); color: var(--muted); margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.sidebar-item-title { font-size: 0.83rem; font-weight: 500; line-height: 1.35; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sidebar-item.active .sidebar-item-title { color: var(--accent); }
+.sidebar-year { padding: 0.4rem 0.9rem; font-size: 0.65rem; font-family: var(--mono); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); background: var(--surface); position: sticky; top: 0; z-index: 1; border-bottom: 1px solid var(--border); }
+.sidebar-loading { padding: 2rem; text-align: center; color: var(--muted); font-size: 0.82rem; }
+
+/* EDITOR PANEL */
+.editor-panel { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--paper); }
+.editor-toolbar {
+  padding: 0.6rem 1.25rem; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+  background: var(--surface);
+}
+.editor-toolbar-title { font-size: 0.82rem; font-weight: 600; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; }
+.editor-meta { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: none; flex-shrink: 0; gap: 1rem; }
+.editor-meta.visible { display: flex; flex-wrap: wrap; }
+.meta-field { display: flex; flex-direction: column; gap: 0.3rem; min-width: 180px; }
+.meta-field label { font-size: 0.72rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.meta-field input { padding: 0.4rem 0.6rem; border: 1px solid var(--border); border-radius: 4px; font-family: var(--sans); font-size: 0.85rem; outline: none; }
+.meta-field input:focus { border-color: var(--accent); }
+.editor-wrap { flex: 1; overflow: hidden; position: relative; }
+.editor-empty {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0.75rem; color: var(--muted);
+}
+.editor-empty-icon { font-size: 2.5rem; opacity: 0.3; }
+.editor-empty p { font-size: 0.9rem; }
+.editor-status { height: 28px; border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 1.25rem; flex-shrink: 0; }
+.status-msg { font-size: 0.75rem; font-family: var(--mono); color: var(--muted); }
+.status-msg.saving { color: var(--accent); }
+.status-msg.saved { color: #3FB950; }
+.status-msg.error { color: #E5534B; }
+
+/* NUEVO ARTICULO */
+.new-btn {
+  margin: 0.75rem; padding: 0.5rem; border: 1.5px dashed var(--border);
+  border-radius: 4px; background: none; cursor: pointer; font-family: var(--sans);
+  font-size: 0.8rem; color: var(--muted); width: calc(100% - 1.5rem);
+  transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+}
+.new-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: 1.5rem; right: 1.5rem;
+  background: var(--ink); color: white;
+  padding: 0.65rem 1.1rem; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 500;
+  transform: translateY(100px); opacity: 0;
+  transition: all 0.25s; z-index: 100;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { background: #1C7A3B; }
+.toast.error { background: #9A1D1D; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../" id="homeLink">urbi<span>GIS</span></a>
+  <span class="nav-badge">Editor</span>
+  <div class="nav-right" id="navRight" style="display:none">
+    <span id="userBadge" style="font-size:0.78rem;color:#8B95A1;font-family:var(--mono)"></span>
+    <button class="btn btn-primary" id="saveBtn" onclick="saveArticle()" disabled>Guardar</button>
+    <button class="btn btn-ghost" onclick="logout()">Salir</button>
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-card">
+    <h2>Editor urbiGIS</h2>
+    <p>Introduce tu Personal Access Token de GitHub para editar artículos y entradas del blog.</p>
+    <label for="tokenInput">GitHub Personal Access Token</label>
+    <input type="password" id="tokenInput" placeholder="ghp_..." autocomplete="off">
+    <div id="loginError" class="login-error">Token inválido o sin permisos de escritura.</div>
+    <button class="btn btn-primary" onclick="doLogin()">Acceder</button>
+    <p style="margin-top:1rem;font-size:0.78rem;color:var(--muted)">
+      Genera tu token en GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → con permiso <strong>repo</strong>.
+    </p>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="appScreen">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-tabs">
+      <div class="sidebar-tab active" id="tabBlog" onclick="switchTab('blog')">Blog</div>
+      <div class="sidebar-tab" id="tabTutorial" onclick="switchTab('tutorial')">Tutorial</div>
+    </div>
+    <div class="sidebar-search">
+      <input type="text" id="searchInput" placeholder="Buscar…" oninput="filterList(this.value)">
+    </div>
+    <div class="sidebar-list" id="sidebarList">
+      <div class="sidebar-loading">Cargando…</div>
+    </div>
+    <button class="new-btn" id="newBtn" onclick="newArticle()">+ Nuevo artículo</button>
+  </div>
+
+  <!-- EDITOR -->
+  <div class="editor-panel">
+    <div class="editor-toolbar">
+      <span class="editor-toolbar-title" id="editorTitle">Selecciona un artículo</span>
+      <button class="btn btn-danger" id="deleteBtn" onclick="deleteArticle()" style="display:none">Eliminar</button>
+    </div>
+    <div class="editor-meta" id="editorMeta">
+      <div class="meta-field">
+        <label>Título</label>
+        <input type="text" id="metaTitle" oninput="onMetaChange()">
+      </div>
+      <div class="meta-field" id="metaDateWrap">
+        <label>Fecha</label>
+        <input type="date" id="metaDate" oninput="onMetaChange()">
+      </div>
+    </div>
+    <div class="editor-wrap" id="editorWrap">
+      <div class="editor-empty" id="editorEmpty">
+        <div class="editor-empty-icon">✎</div>
+        <p>Selecciona un artículo para editarlo</p>
+      </div>
+    </div>
+    <div class="editor-status">
+      <span class="status-msg" id="statusMsg"></span>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const REPO = 'ignacio-arnaiz/urbigis_web';
+const BRANCH = 'main';
+const BASE = 'https://api.github.com';
+
+let TOKEN = '';
+let currentTab = 'blog';
+let allItems = [];
+let currentFile = null;
+let currentSha = null;
+let isDirty = false;
+let tinyReady = false;
+
+// ── AUTH ────────────────────────────────────────────────────────
+async function doLogin() {
+  const t = document.getElementById('tokenInput').value.trim();
+  if (!t) return;
+  document.querySelector('.login-card .btn').textContent = 'Verificando…';
+  document.getElementById('loginError').style.display = 'none';
+  try {
+    const r = await fetch(`${BASE}/repos/${REPO}`, {
+      headers: { Authorization: `token ${t}`, Accept: 'application/vnd.github.v3+json' }
+    });
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    TOKEN = t;
+    sessionStorage.setItem('ghToken', t);
+    showApp(data);
+  } catch {
+    document.getElementById('loginError').style.display = 'block';
+    document.querySelector('.login-card .btn').textContent = 'Acceder';
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem('ghToken');
+  TOKEN = '';
+  currentFile = null;
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('appScreen').style.display = 'none';
+  document.getElementById('navRight').style.display = 'none';
+  document.getElementById('tokenInput').value = '';
+}
+
+async function showApp(repoData) {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('appScreen').style.display = 'flex';
+  document.getElementById('navRight').style.display = 'flex';
+  document.getElementById('userBadge').textContent = repoData.full_name;
+  document.querySelector('.login-card .btn').textContent = 'Acceder';
+  await loadList();
+  initTinyMCE();
+}
+
+// ── LIST ────────────────────────────────────────────────────────
+async function loadList() {
+  document.getElementById('sidebarList').innerHTML = '<div class="sidebar-loading">Cargando…</div>';
+  const folder = currentTab === 'blog' ? 'blog' : 'tutorial';
+  try {
+    const r = await ghGet(`/repos/${REPO}/contents/${folder}?ref=${BRANCH}`);
+    allItems = r.filter(f => f.name.endsWith('.md')).map(f => {
+      let date = '', title = f.name.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace('.md','').replace(/-/g,' ');
+      const dm = f.name.match(/^(\d{4}-\d{2}-\d{2})/);
+      if (dm) date = dm[1];
+      return { path: f.path, name: f.name, date, title, sha: f.sha };
+    });
+    if (currentTab === 'blog') allItems.sort((a,b) => b.date.localeCompare(a.date));
+    else allItems.sort((a,b) => a.name.localeCompare(b.name));
+    renderList(allItems);
+  } catch(e) {
+    document.getElementById('sidebarList').innerHTML = '<div class="sidebar-loading">Error cargando archivos.</div>';
+  }
+}
+
+function renderList(items) {
+  const el = document.getElementById('sidebarList');
+  if (!items.length) { el.innerHTML = '<div class="sidebar-loading">Sin resultados.</div>'; return; }
+  let html = '';
+  let lastYear = '';
+  items.forEach((item, i) => {
+    const year = item.date ? item.date.slice(0,4) : '';
+    if (currentTab === 'blog' && year && year !== lastYear) {
+      html += `<div class="sidebar-year">${year}</div>`;
+      lastYear = year;
+    }
+    const active = currentFile && currentFile.path === item.path ? 'active' : '';
+    const dateStr = item.date ? new Date(item.date+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'}) : '';
+    html += `<div class="sidebar-item ${active}" onclick="openFile(${i})" data-idx="${i}">
+      ${dateStr ? `<div class="sidebar-item-date">${dateStr}</div>` : ''}
+      <div class="sidebar-item-title">${escHtml(item.title)}</div>
+    </div>`;
+  });
+  el.innerHTML = html;
+}
+
+function filterList(q) {
+  const term = q.toLowerCase();
+  const filtered = term ? allItems.filter(i => i.title.toLowerCase().includes(term)) : allItems;
+  renderList(filtered);
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById('tabBlog').classList.toggle('active', tab === 'blog');
+  document.getElementById('tabTutorial').classList.toggle('active', tab === 'tutorial');
+  document.getElementById('metaDateWrap').style.display = tab === 'blog' ? '' : 'none';
+  loadList();
+  clearEditor();
+}
+
+// ── OPEN FILE ───────────────────────────────────────────────────
+async function openFile(idx) {
+  if (isDirty && !confirm('Tienes cambios sin guardar. ¿Continuar?')) return;
+  const item = allItems[idx];
+  setStatus('Cargando…', '');
+  try {
+    const data = await ghGet(`/repos/${REPO}/contents/${item.path}?ref=${BRANCH}`);
+    const raw = atob(data.content.replace(/\n/g,''));
+    const bytes = new Uint8Array(raw.length);
+    for (let i=0;i<raw.length;i++) bytes[i] = raw.charCodeAt(i);
+    const text = new TextDecoder('utf-8').decode(bytes);
+    currentFile = { path: item.path, name: item.name };
+    currentSha = data.sha;
+
+    const { fm, body } = parseFM(text);
+    document.getElementById('metaTitle').value = fm.title || item.title;
+    document.getElementById('metaDate').value = fm.date || item.date || '';
+    document.getElementById('editorTitle').textContent = fm.title || item.title;
+    document.getElementById('editorMeta').classList.add('visible');
+    document.getElementById('editorEmpty').style.display = 'none';
+    document.getElementById('deleteBtn').style.display = '';
+
+    // Activar items en sidebar
+    document.querySelectorAll('.sidebar-item').forEach(el => {
+      el.classList.toggle('active', parseInt(el.dataset.idx) === idx);
+    });
+
+    // Convertir MD a HTML para TinyMCE
+    const html = mdToHtml(body);
+    if (tinyReady && tinymce.get('mceEditor')) {
+      tinymce.get('mceEditor').setContent(html);
+    } else {
+      window._pendingContent = html;
+    }
+    isDirty = false;
+    document.getElementById('saveBtn').disabled = false;
+    setStatus('', '');
+  } catch(e) {
+    setStatus('Error cargando el archivo', 'error');
+  }
+}
+
+function clearEditor() {
+  currentFile = null; currentSha = null; isDirty = false;
+  document.getElementById('editorTitle').textContent = 'Selecciona un artículo';
+  document.getElementById('editorMeta').classList.remove('visible');
+  document.getElementById('deleteBtn').style.display = 'none';
+  document.getElementById('saveBtn').disabled = true;
+  if (tinyReady && tinymce.get('mceEditor')) tinymce.get('mceEditor').setContent('');
+  setStatus('', '');
+}
+
+// ── TINYMCE ─────────────────────────────────────────────────────
+function initTinyMCE() {
+  if (tinyReady) return;
+  document.getElementById('editorWrap').insertAdjacentHTML('beforeend', '<textarea id="mceEditor"></textarea>');
+  tinymce.init({
+    selector: '#mceEditor',
+    height: '100%',
+    menubar: false,
+    resize: false,
+    branding: false,
+    plugins: 'lists link image table code autolink',
+    toolbar: 'undo redo | blocks | bold italic | bullist numlist | link image | table | code',
+    block_formats: 'Párrafo=p; Título 2=h2; Título 3=h3; Título 4=h4; Código=pre',
+    content_style: `
+      body { font-family: 'Space Grotesk', sans-serif; font-size: 15px; line-height: 1.75; color: #1A1A1A; max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem; }
+      img { max-width: 100%; height: auto; border-radius: 4px; }
+      h2,h3,h4 { font-weight: 600; line-height: 1.3; margin: 1.5rem 0 0.5rem; }
+      p { margin: 0 0 1rem; }
+      code { font-family: 'Space Mono', monospace; background: #F0F0EE; padding: 0.15em 0.35em; border-radius: 3px; font-size: 0.85em; }
+      pre { background: #F0F0EE; padding: 1rem; border-radius: 4px; overflow-x: auto; }
+      table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
+      td, th { border: 1px solid #E0E0DE; padding: 0.5rem 0.75rem; font-size: 0.88em; }
+      th { background: #F7F7F5; font-weight: 600; }
+      a { color: #70A6B8; }
+    `,
+    images_upload_handler: uploadImage,
+    automatic_uploads: true,
+    file_picker_types: 'image',
+    setup(editor) {
+      editor.on('init', () => {
+        tinyReady = true;
+        if (window._pendingContent) {
+          editor.setContent(window._pendingContent);
+          window._pendingContent = null;
+        }
+      });
+      editor.on('input change', () => { isDirty = true; });
+    }
+  });
+}
+
+// ── SAVE ────────────────────────────────────────────────────────
+async function saveArticle() {
+  if (!currentFile || !tinyReady) return;
+  const title = document.getElementById('metaTitle').value.trim();
+  const date = document.getElementById('metaDate').value;
+  const html = tinymce.get('mceEditor').getContent();
+  const body = htmlToMd(html);
+
+  let fm = `---\ntitle: "${title.replace(/"/g,'\\"')}"\n`;
+  if (currentTab === 'blog' && date) fm += `date: ${date}\n`;
+  fm += `---\n\n`;
+  const content = fm + body;
+
+  setStatus('Guardando…', 'saving');
+  document.getElementById('saveBtn').disabled = true;
+  try {
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    await ghPut(`/repos/${REPO}/contents/${currentFile.path}`, {
+      message: `Editar: ${title}`,
+      content: encoded,
+      sha: currentSha,
+      branch: BRANCH
+    });
+    isDirty = false;
+    setStatus('Guardado ✓', 'saved');
+    showToast('Guardado correctamente', 'success');
+    document.getElementById('saveBtn').disabled = false;
+    document.getElementById('editorTitle').textContent = title;
+    await loadList();
+  } catch(e) {
+    setStatus('Error al guardar', 'error');
+    showToast('Error al guardar. Comprueba tu token.', 'error');
+    document.getElementById('saveBtn').disabled = false;
+  }
+}
+
+// ── NEW ─────────────────────────────────────────────────────────
+function newArticle() {
+  if (isDirty && !confirm('Tienes cambios sin guardar. ¿Continuar?')) return;
+  const today = new Date().toISOString().slice(0,10);
+  const slug = prompt('Slug del artículo (ej: mi-nuevo-articulo):');
+  if (!slug) return;
+  const folder = currentTab === 'blog' ? 'blog' : 'tutorial';
+  const fname = currentTab === 'blog' ? `${today}-${slug}.md` : `${slug}.md`;
+  currentFile = { path: `${folder}/${fname}`, name: fname };
+  currentSha = null;
+  document.getElementById('metaTitle').value = slug.replace(/-/g,' ');
+  document.getElementById('metaDate').value = today;
+  document.getElementById('editorTitle').textContent = 'Nuevo artículo';
+  document.getElementById('editorMeta').classList.add('visible');
+  document.getElementById('editorEmpty').style.display = 'none';
+  document.getElementById('deleteBtn').style.display = '';
+  document.getElementById('saveBtn').disabled = false;
+  if (tinyReady && tinymce.get('mceEditor')) tinymce.get('mceEditor').setContent('');
+  isDirty = true;
+}
+
+// ── DELETE ──────────────────────────────────────────────────────
+async function deleteArticle() {
+  if (!currentFile) return;
+  if (!confirm(`¿Eliminar "${currentFile.name}"? Esta acción no se puede deshacer.`)) return;
+  setStatus('Eliminando…', 'saving');
+  try {
+    await ghDelete(`/repos/${REPO}/contents/${currentFile.path}`, {
+      message: `Eliminar: ${currentFile.name}`,
+      sha: currentSha,
+      branch: BRANCH
+    });
+    showToast('Artículo eliminado', 'success');
+    clearEditor();
+    await loadList();
+  } catch {
+    setStatus('Error al eliminar', 'error');
+  }
+}
+
+// ── IMAGE UPLOAD ─────────────────────────────────────────────────
+async function uploadImage(blobInfo, progress) {
+  const folder = currentTab === 'blog' ? 'img/blog' : 'img/tutorial';
+  const fname = `${Date.now()}-${blobInfo.filename()}`;
+  const path = `${folder}/${fname}`;
+  try {
+    await ghPut(`/repos/${REPO}/contents/${path}`, {
+      message: `Imagen: ${fname}`,
+      content: blobInfo.base64(),
+      branch: BRANCH
+    });
+    return `https://ignacio-arnaiz.github.io/urbigis_web/${path}`;
+  } catch(e) {
+    throw new Error('Error subiendo imagen');
+  }
+}
+
+// ── GITHUB API ───────────────────────────────────────────────────
+async function ghGet(path) {
+  const r = await fetch(BASE+path, { headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }});
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+async function ghPut(path, body) {
+  const r = await fetch(BASE+path, { method: 'PUT', headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error(r.status);
+  const data = await r.json();
+  if (data.content) currentSha = data.content.sha;
+  return data;
+}
+async function ghDelete(path, body) {
+  const r = await fetch(BASE+path, { method: 'DELETE', headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────
+function parseFM(text) {
+  const fm = {};
+  let body = text;
+  const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  if (m) {
+    m[1].split('\n').forEach(line => {
+      const kv = line.match(/^(\w+):\s*"?(.*?)"?\s*$/);
+      if (kv) fm[kv[1]] = kv[2].trim();
+    });
+    body = m[2];
+  }
+  return { fm, body };
+}
+
+function onMetaChange() {
+  isDirty = true;
+  const t = document.getElementById('metaTitle').value;
+  document.getElementById('editorTitle').textContent = t || 'Sin título';
+}
+
+function setStatus(msg, type) {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  el.className = 'status-msg' + (type ? ' ' + type : '');
+  if (type === 'saved') setTimeout(() => { el.textContent = ''; el.className = 'status-msg'; }, 3000);
+}
+
+function showToast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + (type||'') + ' show';
+  setTimeout(() => t.className = 'toast ' + (type||''), 3000);
+}
+
+function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// MD → HTML (simple, para cargar en TinyMCE)
+function mdToHtml(md) {
+  if (window.marked) return marked.parse(md);
+  return '<pre>' + escHtml(md) + '</pre>';
+}
+
+// HTML → MD (básico, para guardar)
+function htmlToMd(html) {
+  html = html
+    .replace(/<h2[^>]*>(.*?)<\/h2>/gi, '\n## $1\n')
+    .replace(/<h3[^>]*>(.*?)<\/h3>/gi, '\n### $1\n')
+    .replace(/<h4[^>]*>(.*?)<\/h4>/gi, '\n#### $1\n')
+    .replace(/<strong[^>]*>(.*?)<\/strong>/gi, '**$1**')
+    .replace(/<b[^>]*>(.*?)<\/b>/gi, '**$1**')
+    .replace(/<em[^>]*>(.*?)<\/em>/gi, '_$1_')
+    .replace(/<i[^>]*>(.*?)<\/i>/gi, '_$1_')
+    .replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)')
+    .replace(/<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*\/?>/gi, '![$2]($1)')
+    .replace(/<img[^>]*src="([^"]*)"[^>]*\/?>/gi, '![]($1)')
+    .replace(/<li[^>]*>(.*?)<\/li>/gi, '- $1\n')
+    .replace(/<\/?(ul|ol)[^>]*>/gi, '\n')
+    .replace(/<p[^>]*>(.*?)<\/p>/gi, '\n$1\n')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ').replace(/&quot;/g,'"')
+    .replace(/\n{3,}/g, '\n\n').trim();
+  return html;
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+document.getElementById('tokenInput').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+window.addEventListener('beforeunload', e => { if (isDirty) { e.preventDefault(); e.returnValue=''; } });
+
+const saved = sessionStorage.getItem('ghToken');
+if (saved) {
+  document.getElementById('tokenInput').value = saved;
+  doLogin();
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

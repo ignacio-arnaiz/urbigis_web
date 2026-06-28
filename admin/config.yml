@@ -16,6 +16,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "md"
+    media_folder: "/img/blog"
+    public_folder: "https://ignacio-arnaiz.github.io/urbigis_web/img/blog"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
@@ -29,6 +31,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "md"
+    media_folder: "/img/tutorial"
+    public_folder: "https://ignacio-arnaiz.github.io/urbigis_web/img/tutorial"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
