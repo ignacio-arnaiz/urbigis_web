@@ -152,10 +152,11 @@ function blogLoadIdx(idx) {
   fetch(p.file.replace('.html', '.md'))
     .then(function(r) { if (!r.ok) throw new Error(); return r.text(); })
     .then(function(text) {
-      text = text.replace(/^<!--[\s\S]*?-->\s*/m, '');
+      var parsed = parseFrontmatter(text);
+      var html = mdToHtml(parsed.body);
       let heroHtml = '';
       if (p.img) heroHtml = '<img class="blog-article-hero" src="' + p.img + '" alt="" onerror="this.style.display=\'none\'">';
-      art.innerHTML = heroHtml + '<h1>' + p.title + '</h1><div class="blog-article-body">' + text + '</div>';
+      art.innerHTML = heroHtml + '<h1>' + p.title + '</h1><div class="blog-article-body">' + html + '</div>';
       art.querySelectorAll('a[href^="http"]').forEach(function(a) {
         a.target = '_blank'; a.rel = 'noopener';
       });
@@ -243,6 +244,30 @@ document.addEventListener('DOMContentLoaded', function() {
 const HT_ARTICLES = [{slug:'introduccion',title:'Introducción a urbiGIS',cat:'Introducción'},{slug:'acceso-a-urbithings',title:'Modos de Acceso',cat:'Introducción'},{slug:'el-espacio-trabajo',title:'El espacio de trabajo',cat:'Introducción'},{slug:'encabezado',title:'Encabezado',cat:'Introducción'},{slug:'escritorio',title:'Escritorio',cat:'Introducción'},{slug:'2-5-dividir-escritorio',title:'Dividir Escritorio',cat:'Introducción'},{slug:'cuentas-accesos-y-equipos',title:'Cuentas, Accesos y Equipos',cat:'Introducción'},{slug:'tipos-de-datos-de-urbigis',title:'Tipos de Datos en urbiGis',cat:'Introducción'},{slug:'componentes-del-buscador',title:'Componentes del Buscador',cat:'Buscador'},{slug:'contextos-de-busqueda',title:'Contextos de búsqueda',cat:'Buscador'},{slug:'buscar-territorios',title:'Buscar Territorios',cat:'Buscador'},{slug:'buscar-mapas',title:'Buscar Mapas',cat:'Buscador'},{slug:'buscar-geoinformes',title:'Buscar GeoInformes',cat:'Buscador'},{slug:'buscar-localizaciones',title:'Buscar Localizaciones',cat:'Buscador'},{slug:'buscar-conjuntos-de-datos',title:'Buscar Conjuntos de Datos',cat:'Buscador'},{slug:'busqueda-de-instrumentos',title:'Buscar Instrumentos',cat:'Buscador'},{slug:'buscar-anotaciones',title:'Buscar Participaciones',cat:'Buscador'},{slug:'buscar_por_nombre',title:'Buscar por nombre',cat:'Buscador'},{slug:'buscar-por-clic',title:'Buscar por clic',cat:'Buscador'},{slug:'buscar-por-geometria',title:'Buscar por geometría',cat:'Buscador'},{slug:'busqueda-avanzada',title:'La búsqueda avanzada se encuentra en el panel de herramie…',cat:'Buscador'},{slug:'filtros-de-busqueda',title:'Filtros de búsqueda',cat:'Buscador'},{slug:'panel-de-resultados',title:'Panel de Resultados',cat:'Buscador'},{slug:'activar-desactivar-elementos',title:'Activar y Desactivar Elementos',cat:'Escritorio'},{slug:'reordenar-mapas',title:'Reordenar los Mapas',cat:'Escritorio'},{slug:'anadir-mapas',title:'Añadir Mapas Externos',cat:'Escritorio'},{slug:'anadir-notas-al-mapa',title:'Añadir Anotaciones al Mapa',cat:'Escritorio'},{slug:'2-6-vista-previa-de-mapas',title:'Vista previa de Mapas',cat:'Escritorio'},{slug:'panel-modulos',title:'Panel de Módulos',cat:'Escritorio'},{slug:'panel-resultados',title:'Panel de Datos',cat:'Escritorio'},{slug:'retirar-del-escritorio',title:'Retirar elementos del Escritorio',cat:'Escritorio'},{slug:'compartir-el-mapa',title:'Compartir el Mapa',cat:'Escritorio'},{slug:'imprimir-mapa',title:'Imprimir el Mapa',cat:'Escritorio'},{slug:'leyenda-mapa',title:'Ver la Leyenda de un Mapa',cat:'Escritorio'},{slug:'herramientas_basicas',title:'Herramientas básicas',cat:'Herramientas'},{slug:'crear-y-modificar-geometrias',title:'Crear y Modificar geometrías',cat:'Herramientas'},{slug:'dibujo-avanzado',title:'Edición Avanzada',cat:'Herramientas'},{slug:'estilos',title:'Aplicar Estilos a geometrías',cat:'Herramientas'},{slug:'unidades-de-medida',title:'Unidades de medida',cat:'Herramientas'},{slug:'colocar-elementos',title:'Colocar elementos',cat:'Herramientas'},{slug:'ir-a-coordenada',title:'Ir a coordenada',cat:'Herramientas'},{slug:'consulta-posicion',title:'Consulta de posición',cat:'Herramientas'},{slug:'transparencia',title:'Transparencia',cat:'Herramientas'},{slug:'zoom-servicio',title:'Hacer zoom a un Servicio',cat:'Herramientas'},{slug:'obtener-metadatos-servicio',title:'Obtener metadatos de un Servicio',cat:'Herramientas'},{slug:'selector-de-idioma',title:'Selector de idioma',cat:'Herramientas'},{slug:'servicio-de-mapa',title:'Servicios de Mapa',cat:'Mapas y Servicios'},{slug:'servicios-de-datos',title:'Servicios de Datos',cat:'Mapas y Servicios'},{slug:'localizadores',title:'Localizadores',cat:'Mapas y Servicios'},{slug:'geoportales',title:'Geoportales',cat:'Mapas y Servicios'},{slug:'ambito',title:'Territorios',cat:'Mapas y Servicios'},{slug:'conjuntos-de-datos',title:'Conjuntos de datos',cat:'Conjuntos de datos'},{slug:'editar-conjuntos-de-datos',title:'Editar Conjuntos de Datos',cat:'Conjuntos de datos'},{slug:'documentos',title:'Documentos',cat:'Conjuntos de datos'},{slug:'geo-transaccion',title:'Geo-transacción',cat:'Conjuntos de datos'},{slug:'instrumento',title:'Instrumentos',cat:'Instrumentos'},{slug:'versiones-instrumento',title:'Versiones de Instrumento',cat:'Instrumentos'},{slug:'atributo',title:'Atributos',cat:'Instrumentos'},{slug:'entidad',title:'Entidades',cat:'Instrumentos'},{slug:'asignacion',title:'Asignaciones',cat:'Instrumentos'},{slug:'operacion',title:'Operaciones',cat:'Instrumentos'},{slug:'relacion',title:'Relaciones',cat:'Instrumentos'},{slug:'grupos-de-relacion',title:'Grupos de Relación',cat:'Instrumentos'},{slug:'solicitar-nueva-version-instrumento',title:'Solicitar nueva Versión de Instrumento',cat:'Instrumentos'},{slug:'solicitar-nuevo-instrumento',title:'Solicitar nuevo Instrumento',cat:'Instrumentos'},{slug:'gestion-de-solicitudes',title:'Solicitudes',cat:'Instrumentos'},{slug:'temas-de-cuenta',title:'Temas de Cuenta',cat:'Administración'},{slug:'carpetas-de-documentos',title:'Carpetas de Documentos',cat:'Administración'},{slug:'registro-de-cuentas',title:'Registro de Cuentas',cat:'Gestión del Registro'},{slug:'registro-de-accesos',title:'Registro de Accesos',cat:'Gestión del Registro'},{slug:'perfil-de-cuenta',title:'Perfil de Cuenta',cat:'Gestión del Registro'},{slug:'perfil-de-acceso',title:'Perfil de Acceso',cat:'Gestión del Registro'},{slug:'gestion-usuarios',title:'Accesos de Usuario',cat:'Gestión del Registro'},{slug:'usuario',title:'Son Accesos de Usuario todas las personas que necesiten a…',cat:'Gestión del Registro'},{slug:'cuenta-de-organizacion',title:'Cuenta de Organización',cat:'Gestión del Registro'},{slug:'0-8-recuperar-contrasena',title:'Recuperar contraseña',cat:'Gestión del Registro'}];
 let htCurrentIdx = -1;
 
+
+// Parsear frontmatter YAML y extraer body
+function parseFrontmatter(text) {
+  var fm = {};
+  var body = text;
+  var match = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  if (match) {
+    var lines = match[1].split('\n');
+    lines.forEach(function(line) {
+      var kv = line.match(/^(\w+):\s*"?([^"]*)"?\s*$/);
+      if (kv) fm[kv[1]] = kv[2].trim();
+    });
+    body = match[2];
+  }
+  return { fm: fm, body: body };
+}
+
+// Convertir Markdown a HTML (usa marked si está disponible, si no muestra plano)
+function mdToHtml(text) {
+  if (window.marked) return window.marked.parse(text);
+  // Fallback básico si marked no cargó
+  return '<pre style="white-space:pre-wrap">' + text + '</pre>';
+}
+
 function htLoadSlug(slug) {
   const leaf = document.querySelector(`[data-slug="${slug}"]`);
   if (leaf) htSelectLeaf(leaf);
@@ -275,9 +300,9 @@ function htSelectLeaf(el) {
       return r.text();
     })
     .then(function(text) {
-      // Quitar el comentario frontmatter
-      text = text.replace(/^<!--[\s\S]*?-->\s*/m, '');
-      htBodyEl.innerHTML = '<h1>' + title + '</h1>' + text;
+      var parsed = parseFrontmatter(text);
+      var html = mdToHtml(parsed.body);
+      htBodyEl.innerHTML = '<h1>' + title + '</h1>' + html;
       // Abrir links externos en nueva pestaña
       htBodyEl.querySelectorAll('a[href^="http"]').forEach(function(a) {
         a.target = '_blank'; a.rel = 'noopener';
