@@ -592,8 +592,19 @@ function htmlToMd(html) {
     .replace(/<em[^>]*>(.*?)<\/em>/gi, '_$1_')
     .replace(/<i[^>]*>(.*?)<\/i>/gi, '_$1_')
     .replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)')
-    .replace(/<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*\/?>/gi, '![$2]($1)')
-    .replace(/<img[^>]*src="([^"]*)"[^>]*\/?>/gi, '![]($1)')
+    .replace(/<img([^>]*)>/gi, function(match, attrs) {
+      var src = (attrs.match(/src="([^"]*)"/) || [])[1] || '';
+      var alt = (attrs.match(/alt="([^"]*)"/) || [])[1] || '';
+      var w = (attrs.match(/width="([^"]*)"/) || [])[1] || '';
+      var h = (attrs.match(/height="([^"]*)"/) || [])[1] || '';
+      if (w || h) {
+        var style = '';
+        if (w) style += 'width:' + w + 'px;';
+        if (h) style += 'height:' + h + 'px;';
+        return '<img src="' + src + '" alt="' + alt + '" style="' + style + '">';
+      }
+      return '!\[' + alt + '\](' + src + ')';
+    })
     .replace(/<li[^>]*>(.*?)<\/li>/gi, '- $1\n')
     .replace(/<\/?(ul|ol)[^>]*>/gi, '\n')
     .replace(/<p[^>]*>(.*?)<\/p>/gi, '\n$1\n')

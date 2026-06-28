@@ -263,7 +263,10 @@ function parseFrontmatter(text) {
 
 // Convertir Markdown a HTML (usa marked si está disponible, si no muestra plano)
 function mdToHtml(text) {
-  if (window.marked) return window.marked.parse(text);
+  if (window.marked) {
+    marked.setOptions({ breaks: true });
+    return window.marked.parse(text);
+  }
   // Fallback básico si marked no cargó
   return '<pre style="white-space:pre-wrap">' + text + '</pre>';
 }
